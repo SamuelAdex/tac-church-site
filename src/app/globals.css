@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@font-face {
+  font-family: GeneralSans;
+  src: url("../public/assets/fonts/GeneralSans-Regular.otf");
+}
+
+
+@font-face {
+  font-family: GeneralSansBold;
+  src: url("../public/assets/fonts/GeneralSans-Bold.otf");
+}
+
+
+@font-face {
+  font-family: GeneralSansSemiBold;
+  src: url("../public/assets/fonts/GeneralSans-Semibold.otf");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: GeneralSans;
+  scroll-behavior: smooth;
+}
+
+.regular{
+  font-family: GeneralSans;
+}
+.semibold{
+  font-family: GeneralSansSemiBold;
+}
+.bold{
+  font-family: GeneralSansBold;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.hero{
+  background: linear-gradient(-180deg, rgba(0, 0, 0, 0.7) 15.31%, rgba(0, 0, 0, 0.9) 100%), url('../public/assets/img/2.jpeg') no-repeat;
+  background-size: cover;
+}
+.slide-left {
+  -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  transition: ease-in-out .2s;
+}
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(-0px);
+    transform: translateX(-0px);
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(-0px);
+    transform: translateX(-0px);
+  }
+}
+
+.slides{
+  width: fit-content;
+  animation: loop 20s linear infinite;
+}
+.slides-1{
+  width: fit-content;
+  animation: loop1 20s linear infinite;
+}
+@keyframes loop {
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-50%);
+  }
+}
+@keyframes loop1 {
+  0%{
+    transform: translateX(-50%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+
