@@ -20,16 +20,16 @@ const Footer = () => {
                 </div>
                 <div className='md:text-[16px] md:w-[300px] md:text-left text-center md:px-3 text-[14px] text-black'>The Church with the difference, raising Champions for Global Impact.</div>
                 <div className='flex items-center md:justify-start justify-center gap-[30px] md:px-3 mt-4'>
-                    <Link href={"#"}> 
+                    <Link href={"https://www.facebook.com/theChampionshousechurch?mibextid=ZbWKwL"} target='_blank'> 
                         <TbBrandFacebook className='md:text-2xl text-[25px] animate-pulse' />
                     </Link>
-                    <Link href={"#"}>
+                    <Link href={"https://vm.tiktok.com/ZMSk5fgDD/"} target='_blank'>
                         <TbBrandTiktok className='md:text-2xl text-[25px] animate-pulse' />
                     </Link>
-                    <Link href={"#"}>
+                    <Link href={"https://www.instagram.com/thearenaofchampionstac?igsh=MnV2NXR6a2ZtemM4"} target='_blank'>
                         <TbBrandInstagram className='md:text-2xl text-[25px] animate-pulse' />
                     </Link>
-                    <Link href={"#"}>
+                    <Link href={"https://youtube.com/@thearenaofchampions-cw2rl?si=KGVyfEQPiCmd10KP"} target='_blank'>
                         <TbBrandYoutube className='md:text-2xl text-[25px] animate-pulse' />
                     </Link>
                 </div>

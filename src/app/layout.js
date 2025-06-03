@@ -8,7 +8,7 @@ import Script from "next/script";
 const GTM_ID = process.env.GTM_ID;
 
 export const metadata = {
-  title: "TAC",
+  title: "TAC - POINTING PEOPLE TO THE LIFE OF A CHAMPION",
   description: "The Church with the difference, raising Champions for Global Impact.",
   metadataBase: new URL("https://thearenaofchampions.com"),
   keywords: ["worship", "praise", "lyric", "lyric concert", "young minister"],

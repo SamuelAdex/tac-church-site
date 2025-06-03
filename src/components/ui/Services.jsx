@@ -12,7 +12,7 @@ const Services = () => {
             <div className='flex md:flex-row flex-col items-center justify-center gap-[30px]'>
                 <div className='flex-[1] space-y-5'>
                     <div className='md:text-[32px] semibold'>UNIFIED SERVICE</div>
-                    <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora est expedita et sed nulla placeat iure voluptatum ducimus consectetur, quidem accusamus? Velit sequi omnis corrupti accusantium? Dicta expedita quae repellendus.</p>
+                    <p className=''>Our Unified Services (Combined Services) take place on rare occasions, especially during our mid-year or end-of-year thanksgiving services, and also during the grand finale of any of our programs. It's usually two services: First Service - 7:30 AM, and Second Service - 9:30 AM.</p>
                     <Button 
                         text={"LEARN MORE"}
                         btnStyle={"bg-orange-200 text-black p-3"}
@@ -28,13 +28,19 @@ const Services = () => {
             <div className='flex md:flex-row flex-col-reverse items-center justify-center gap-[30px]'>
                 <div style={{background: "linear-gradient(-180deg, rgba(0, 0, 0, 0.4) 60.31%, rgba(0, 0, 0, 0.9) 100%), url('https://res.cloudinary.com/samueladexcloudinary/image/upload/v1739548970/WhatsApp_Image_2024-09-26_at_11.30.07_PM_2_zaq9me.jpg')", backgroundSize: 'cover'}} className='relative md:flex-[1.3] md:w-auto w-full h-[350px]'>
                     <div className='absolute p-6 md:w-[400px] w-full text-white'>
-                        <div className='md:text-[40px] text-[28px] md:leading-[40px] leading-[30px] bold'>This Sunday. FOUR Services. 7:00AM - 12PM.</div>
+                        <div className='md:text-[40px] text-[28px] md:leading-[40px] leading-[30px] bold'>This Sunday. FIVE Services. 7:00AM - 12PM.</div>
                     </div>
                     {/* <Image src={imgBg} alt='' className='' /> */}
                 </div>
                 <div className='flex-[1] space-y-5'>
-                    <div className='md:text-[32px] semibold'>FOUR SERVICES</div>
-                    <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora est expedita et sed nulla placeat iure voluptatum ducimus consectetur, quidem accusamus? Velit sequi omnis corrupti accusantium? Dicta expedita quae repellendus.</p>
+                    <div className='md:text-[32px] semibold'>FIVE SERVICES</div>
+                    <p className=''>Our five power-packed impartation services were initiated to establish a system where the church becomes convenient and accommodating to as many people as possible. The services are scheduled as follows:
+- First Service - 7:00 AM (our Wisdom Class, where we receive wisdom to stand out in every sphere of life)
+- Second Service - 8:00 AM
+- Third Service - 9:10 AM
+- Fourth Service - 10:20 AM
+- Fifth Service - 11:20 AM
+Each service is a maximum of 1 hour and 10 minutes.</p>
                     <Button 
                         text={"LEARN MORE"}
                         btnStyle={"bg-orange-200 text-black p-3"}

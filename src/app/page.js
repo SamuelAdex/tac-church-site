@@ -6,6 +6,7 @@ import Header from "@/components/ui/Header";
 import Hero from "@/components/ui/Hero";
 import Services from "@/components/ui/Services";
 import Showcase from "@/components/ui/Showcase";
+import Testimonial from "@/components/ui/Testimonial";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Showcase />
       <Services />
       <Events />
+      <Testimonial />
       <Contact />
       <Footer />
     </>
