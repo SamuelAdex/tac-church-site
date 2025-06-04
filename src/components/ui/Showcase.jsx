@@ -29,7 +29,7 @@ const Showcase = () => {
                     {isPlaying == false && (
                         <>
                             <div className='text-orange-200 bold md:text-[42px]'>Watch Our Intro Video</div>
-                            <p>voluptate consequatur quam fugit nulla veritatis odio. Fuga, illo illum consectetur sunt amet cumque distinctio consequatur.</p>
+                            <p className='text-orange-200 md:text-[18px] text-[14px]'>Experience the power of faith and community through our inspiring stories.</p>
                         </>
                     )}
                 </div>
