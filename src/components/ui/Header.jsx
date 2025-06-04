@@ -38,7 +38,7 @@ const Header = () => {
                 <div className='flex md:text-[14px] uppercase text-white font-[600] items-center gap-[60px] justify-between'>
                     <Link href={"#about"}>About</Link>
                     <Link href={"#events"}>Events</Link>
-                    <Link href={"#contact"}>Location</Link>
+                    {/* <Link href={"#contact"}>Location</Link> */}
                 </div>
 
                 <Link href="#contact" className=''>
@@ -58,7 +58,7 @@ const Header = () => {
                 <div className='text-[14px] regular uppercase text-black font-[600] flex flex-col gap-6'>
                     <Link href={"#about"}>About</Link>
                     <Link href={"#events"}>Events</Link>
-                    <Link href={"#contact"}>Location</Link>
+                    {/* <Link href={"#contact"}>Location</Link> */}
                 </div>
 
                 <Link href="#contact" className=''>
