@@ -66,8 +66,7 @@ const Testimonial = () => {
     };
 
     return (
-        <>
-        
+        <>        
             <div className='grid place-items-center z-40 bg-black md:h-[120vh] py-24 relative md:px-12 px-8'>
                 <div className='flex md:flex-row flex-col items-center gap-2 justify-center w-full py-4'>
                     <p className='text-gray-400 md:text-[20px] text-[12px] text-center'>Your Appreciate what the Lord has done for You?</p>

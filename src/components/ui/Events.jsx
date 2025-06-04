@@ -9,7 +9,7 @@ const Events = () => {
     <div className='overflow-hidden py-14' id='events'>
         <div className='w-[90%] m-auto'>
             <div className='md:text-[40px] text-[35px] bold text-center'>Our Yearly Events</div>
-            <p className='text-center m-auto md:w-[700px]'>Our yearly programs are events orchestrated to bring God's timely divine move within the year. We have programs such as Harvest of Miracles, Lyrics Amplified, His Glory Conference, and Choir Day Celebration, among others, as the Lord may direct.</p>
+            <p className='text-center m-auto md:w-[700px]'>{"Our yearly programs are events orchestrated to bring God's timely divine move within the year. We have programs such as Harvest of Miracles, Lyrics Amplified, His Glory Conference, and Choir Day Celebration, among others, as the Lord may direct."}</p>
         </div>
         <div className='slides flex items-center gap-3 mt-8'>
             {program_one.map((_, i)=>(

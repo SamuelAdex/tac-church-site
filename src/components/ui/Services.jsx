@@ -12,7 +12,7 @@ const Services = () => {
             <div className='flex md:flex-row flex-col items-center justify-center gap-[30px]'>
                 <div className='flex-[1] space-y-5'>
                     <div className='md:text-[32px] semibold'>UNIFIED SERVICE</div>
-                    <p className=''>Our Unified Services (Combined Services) take place on rare occasions, especially during our mid-year or end-of-year thanksgiving services, and also during the grand finale of any of our programs. It's usually two services: First Service - 7:30 AM, and Second Service - 9:30 AM.</p>
+                    <p className=''>{"Our Unified Services (Combined Services) take place on rare occasions, especially during our mid-year or end-of-year thanksgiving services, and also during the grand finale of any of our programs. It's usually two services: First Service - 7:30 AM, and Second Service - 9:30 AM."}</p>
                     <Button 
                         text={"LEARN MORE"}
                         btnStyle={"bg-orange-200 text-black p-3"}
@@ -32,15 +32,15 @@ const Services = () => {
                     </div>
                     {/* <Image src={imgBg} alt='' className='' /> */}
                 </div>
-                <div className='flex-[1] space-y-5'>
+                <div className='flex-[1] space-y-2'>
                     <div className='md:text-[32px] semibold'>FIVE SERVICES</div>
                     <p className=''>Our five power-packed impartation services were initiated to establish a system where the church becomes convenient and accommodating to as many people as possible. The services are scheduled as follows:
-- First Service - 7:00 AM (our Wisdom Class, where we receive wisdom to stand out in every sphere of life)
-- Second Service - 8:00 AM
-- Third Service - 9:10 AM
-- Fourth Service - 10:20 AM
-- Fifth Service - 11:20 AM
-Each service is a maximum of 1 hour and 10 minutes.</p>
+                        <li className="ml-[2rem]">First Service - 7:00 AM (our Wisdom Class, where we receive wisdom to stand out in every sphere of life)</li>
+                        <li className="ml-[2rem]">Second Service - 8:00 AM</li>
+                        <li className="ml-[2rem]">Third Service - 9:10 AM</li>
+                        <li className="ml-[2rem]">Fourth Service - 10:20 AM</li>
+                        <li className="ml-[2rem]">Fifth Service - 11:20 AM</li>
+                        Each service is a maximum of 1 hour and 10 minutes.</p>
                     <Button 
                         text={"LEARN MORE"}
                         btnStyle={"bg-orange-200 text-black p-3"}

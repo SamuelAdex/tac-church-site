@@ -1,15 +1,24 @@
-// components/SupportUsButton.jsx
 'use client';
 
-import { useState } from 'react';
-import { PaystackButton } from 'react-paystack';
+import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
+import dynamic from 'next/dynamic';
+
+// Dynamically import PaystackButton with ssr option set to false
+const PaystackButton = dynamic(
+  () => import('react-paystack').then((mod) => mod.PaystackButton),
+  { ssr: false }
+);
 
 const SupportUsButton = ({ setIsPaymentModal }) => {
     const publicKey = process.env.NEXT_PUBLIC_PAYSTACK_KEY;
     const [amount, setAmount] = useState(""); // Amount in kobo (10000 kobo = 100 NGN)
     const [email, setEmail] = useState('');
-    const [loading, setLoading] = useState(false);
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
 
     const componentProps = {
         email,
@@ -23,25 +32,6 @@ const SupportUsButton = ({ setIsPaymentModal }) => {
             setIsPaymentModal(false);
         },
         onClose: () => alert("Payment closed."),
-    };
-
-    const handleSupport = async () => {
-        setLoading(true);
-        const res = await fetch('/api/paystack', {
-            method: 'POST',
-            body: JSON.stringify({ email, amount: parseInt(amount) * 100 }),
-            headers: { 'Content-Type': 'application/json' },
-        });
-        const data = await res.json();
-        setLoading(false);
-
-        if (data?.data?.authorization_url) {
-            if (typeof window !== 'undefined') {
-                window.location.href = data.data.authorization_url;
-            }
-        } else {
-            toast('Failed to initialize payment.');
-        }
     };
 
     return (
@@ -64,14 +54,7 @@ const SupportUsButton = ({ setIsPaymentModal }) => {
                 onChange={(e) => setAmount(e.target.value)}
                 className="border p-2 rounded-md w-full focus:outline-none bg-transparent text-white"
             />
-            {/* <button
-        onClick={handleSupport}
-        disabled={loading || !email}
-        className="p-3 bg-orange-200 font-[500] text-black"
-      >
-        {loading ? 'Processing...' : 'Support Us'}
-      </button> */}
-            <PaystackButton {...componentProps} className="p-3 bg-orange-200 font-[500] text-black" />
+            {isClient && <PaystackButton {...componentProps} className="p-3 bg-orange-200 font-[500] text-black" />}
         </div>
     );
 };
