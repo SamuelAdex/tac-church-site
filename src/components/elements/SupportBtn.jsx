@@ -30,6 +30,9 @@ const SupportUsButton = ({ setIsPaymentModal }) => {
         onSuccess: () => {
             toast("Thanks for the support!")
             setIsPaymentModal(false);
+            if(typeof window !== 'undefined') {
+                window.location = "#contact";
+            }
         },
         onClose: () => alert("Payment closed."),
     };

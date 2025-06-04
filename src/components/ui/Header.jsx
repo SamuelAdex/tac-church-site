@@ -31,22 +31,22 @@ const Header = () => {
   return (
     <div className={`fixed top-0 w-full p-2 z-20 ${bgColor ? 'backdrop-blur-md bg-[rgba(25,24,24,0.53)]' : ''}`}>
         <div className='flex md:w-[90%] m-auto w-full items-center justify-between'>
-            <div className=''>
+            <Link href={'/'} className=''>
                 <Image src={logo} alt="" className='w-[64px] h-[64px]' />
-            </div>
+            </Link>
             <div className='md:flex hidden items-center gap-[30px] justify-between'>
                 <div className='flex md:text-[14px] uppercase text-white font-[600] items-center gap-[60px] justify-between'>
                     <Link href={"#about"}>About</Link>
                     <Link href={"#events"}>Events</Link>
-                    <Link href={"#location"}>Location</Link>
+                    <Link href={"#contact"}>Location</Link>
                 </div>
 
-                <div className=''>
+                <Link href="#contact" className=''>
                     <Button
                         text={"PRAYER REQUEST"}
                         btnStyle={"p-3 rounded-full bg-orange-200 w-[200px] text-black semibold"}
                     />
-                </div>
+                </Link>
             </div>
             <MdMenu onClick={()=> setIsNav(!isNav)} className='md:hidden flex text-white text-4xl cursor-pointer' />
         </div>
@@ -58,15 +58,15 @@ const Header = () => {
                 <div className='text-[14px] regular uppercase text-black font-[600] flex flex-col gap-6'>
                     <Link href={"#about"}>About</Link>
                     <Link href={"#events"}>Events</Link>
-                    <Link href={"#location"}>Location</Link>
+                    <Link href={"#contact"}>Location</Link>
                 </div>
 
-                <div className=''>
+                <Link href="#contact" className=''>
                     <Button
                         text={"PRAYER REQUEST"}
                         btnStyle={"p-3 rounded-full bg-orange-200 w-[200px] text-black semibold"}
                     />
-                </div>
+                </Link>
             </div>
         </div>}
     </div>

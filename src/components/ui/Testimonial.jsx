@@ -69,7 +69,7 @@ const Testimonial = () => {
         <>        
             <div className='grid place-items-center z-40 bg-black md:h-[120vh] py-24 relative md:px-12 px-8'>
                 <div className='flex md:flex-row flex-col items-center gap-2 justify-center w-full py-4'>
-                    <p className='text-gray-400 md:text-[20px] text-[12px] text-center'>Your Appreciate what the Lord has done for You?</p>
+                    <p className='text-gray-400 md:text-[20px] text-[12px] text-center'>Do you want to appreciate the Lord for what he has done for you?</p>
                     <Button 
                         text={"Please share with Us!!!"} 
                         btnStyle={'bg-orange-200 text-black p-2 md:text-[14px] text-[12px] font-[500]'} 

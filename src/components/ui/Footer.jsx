@@ -39,17 +39,17 @@ const Footer = () => {
                     <div className='semibold md:text-[14px] text-[12px]'>QUICK LINKS</div>
                     <Link href={"#about"} className='md:text-[13px] text-[11px] font-[500]'>About</Link>
                     <Link href={"#events"} className='md:text-[13px] text-[11px] font-[500]'>Events</Link>
-                    <Link href={"#"} className='md:text-[13px] text-[11px] font-[500]'>Prayer Request</Link>
+                    <Link href={"#contact"} className='md:text-[13px] text-[11px] font-[500]'>Prayer Request</Link>
                 </div>
                 <div className='flex flex-col space-y-2'>
                     <div className='semibold md:text-[14px] text-[12px]'>SPECIALS</div>
-                    <Link href={"#"} className='md:text-[13px] text-[11px] font-[500]'>Young Ministers Hangout</Link>
-                    <Link href={"#"} className='md:text-[13px] text-[11px] font-[500]'>Singles & Married Timeout</Link>
-                    <Link href={"#"} className='md:text-[13px] text-[11px] font-[500]'>Lyric Praise Concert</Link>
+                    <Link href={"#events"} className='md:text-[13px] text-[11px] font-[500]'>Young Ministers Hangout</Link>
+                    <Link href={"#events"} className='md:text-[13px] text-[11px] font-[500]'>Singles & Married Timeout</Link>
+                    <Link href={"#events"} className='md:text-[13px] text-[11px] font-[500]'>Lyric Praise Concert</Link>
                 </div>
                 <div className=''>
                     <div className='md:text-[14px] text-[12px] semibold uppercase'>Download Our Digital Library App</div>
-                    <div className='flex items-center gap-2 mt-2'>
+                    <div className='flex md:flex-row flex-col items-center gap-2 mt-2'>
                         <div className='flex items-center md:w-auto w-full cursor-pointer text-white gap-2 bg-black rounded-[12px] p-4'>
                             <IoLogoGooglePlaystore className='text-4xl' />
                             <div className='md:leading-[18px]'>
