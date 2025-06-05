@@ -1,14 +1,29 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Button from '../elements/Button';
 import Modal from '../elements/Modal';
 import { MdClose } from 'react-icons/md';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import { GrCloudUpload } from 'react-icons/gr';
+import { storeImage } from '@/utils/helpers';
+import Image from 'next/image';
 
 const Testimonial = () => {
     let [tag, setTag] = useState(0);
     const [isTestimonyModal, setIsTestimonyModal] = useState(false);
+    const [data, setData] = useState({
+        by: "",
+        message: "",
+    });
+    const [isLoading, setIsLoading] = useState(false);
+    const [isFetching, setFetching] = useState(false);
+    const [payloads, setPayloads] = useState([]);
+    const [uploading, setUploading] = useState(false);
+    const [imageFile, setImageFile] = useState(null);
+    const [imagePublicId, setImagePublicId] = useState(null);
 
     let testimonies = [
         {
@@ -65,15 +80,86 @@ const Testimonial = () => {
         handleTagSwitch((tag + 1) % testimonies.length);
     };
 
+
+    const handleSubmitTestimony = async ()=> {
+        if(!data.by || !data.message || !imageFile) {
+            toast("Fields can't be empty");
+            return;
+        }
+        setIsLoading(true)
+        try {
+            const { data } = await axios.post('https://thearenaofchampions.vercel.app/api/testimony', { by: data.by, message: data.message, file: imageFile, publicId: publicId }, {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            if (data.msg == "success") {
+                toast("Testimony submitted successfully");
+                setData({
+                    by: "",
+                    message: "",
+                });
+                setIsTestimonyModal(false);
+                setIsLoading(false);
+            }
+            setIsLoading(false);
+        } catch (error) {
+            const err = error.response?.data;
+            setIsLoading(false);
+            toast(err?.toString());
+        }
+    }
+
+
+
+    const handleImageChange = async (e) => {
+        const file = e.target.files[0];
+
+        if (file) {
+            setUploading(true);
+            try {
+                const { url, publicId } = await storeImage(file);  // Call the storeImage function
+                setImageFile(url);  // Set the image URL from the response
+                setImagePublicId(publicId)
+                console.log("Image public Id: ", { url, publicId });
+            } catch (err) {
+                toast('Error uploading image');
+                console.error(err);
+            } finally {
+                setUploading(false);
+            }
+        }
+    };
+
+    useEffect(() => {
+        const fetchTestimonies = async () => {
+            setFetching(true);
+            try {
+                const { data } = await axios.get('https://thearenaofchampions.vercel.app/api/testimony');
+                console.log(data)
+                if (data.msg === "success") {
+                    setPayloads(data.res);
+                    setFetching(false);
+                }
+            } catch (error) {
+                const err = error.response?.data;
+                setFetching(false);
+                toast(err?.toString());
+            }
+        }
+
+        fetchTestimonies();
+    }, [isLoading]);
+
     return (
-        <>        
+        <>
             <div className='grid place-items-center z-40 bg-black md:h-[120vh] py-24 relative md:px-12 px-8'>
                 <div className='flex md:flex-row flex-col items-center gap-2 justify-center w-full py-4'>
                     <p className='text-gray-400 md:text-[20px] text-[12px] text-center'>Do you want to appreciate the Lord for what he has done for you?</p>
-                    <Button 
-                        text={"Please share with Us!!!"} 
-                        btnStyle={'bg-orange-200 text-black p-2 md:text-[14px] text-[12px] font-[500]'} 
-                        onBtnClick={()=> setIsTestimonyModal(true)}
+                    <Button
+                        text={"Please share with Us!!!"}
+                        btnStyle={'bg-orange-200 text-black p-2 md:text-[14px] text-[12px] font-[500]'}
+                        onBtnClick={() => setIsTestimonyModal(!isTestimonyModal)}
                     />
                 </div>
                 <div className={`transition-transform duration-500 ease-in-out display items-center justify-center ${isAnimating ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-100'
@@ -99,22 +185,39 @@ const Testimonial = () => {
             </div>
 
             {isTestimonyModal && (
-                <Modal isOpen={isTestimonyModal} onCloseModal={()=> setIsTestimonyModal(false)}>
-                    <div className='md:w-[600px] scale-up-center w-full rounded-[12px] p-8 bg-black'>
+                <Modal isOpen={isTestimonyModal} onCloseModal={() => setIsTestimonyModal(false)} style="top-[50px]">
+                    <div className='md:w-[600px] scale-up-center w-full overflow-auto h-[600px] rounded-[12px] p-8 bg-black'>
                         <div className="relative">
-                            <MdClose onClick={()=> setIsTestimonyModal(false)} className="text-orange-200 absolute right-[-20px] top-[-20px] text-[30px] cursor-pointer" />
+                            <MdClose onClick={() => setIsTestimonyModal(false)} className="text-orange-200 absolute right-[-20px] top-[-20px] text-[30px] cursor-pointer" />
                             <div className="text-white text-[16px] font-[600]">Dearly Beloved, Share Your Testimony With Us</div>
                             <p className="text-[20px] font-[500] text-gray-400">Let others be inspired by the Goodness of the Lord in your Life and Everything that concerns you.</p>
                         </div>
                         <div className="space-y-4">
                             <div className="flex flex-col gap-1">
                                 <label>Full Name</label>
-                                <input placeholder='Enter your name' className='p-3 bg-transparent border-[1px] focus:outline-none text-white' />
+                                <input value={data.by} onChange={(e) => setData({ ...data, by: e.target.value })} placeholder='Enter your name' className='p-3 bg-transparent border-[1px] focus:outline-none text-white' />
                             </div>
-                            <textarea className='w-full h-[200px] bg-transparent border-[1px] p-3 focus:outline-none text-white' />
-                            <Button 
+                            {!imageFile && <div className="">
+                                <input onChange={handleImageChange} type="file" className="hidden cursor-pointer" id="image-upload" />
+                                <label htmlFor="image-upload" className="rounded-[10px] md:h-[80px] p-8 border-[2.7px] border-dashed bg-red-50 grid place-items-center">
+                                    <div className="text-center flex flex-col items-center justify-center">
+                                        <GrCloudUpload className="text-2xl" />
+                                        <div className="w-[200px] text-sm">Upload your Image (optional)</div>
+                                    </div>
+                                </label>
+                            </div>}
+                            {imageFile && <div className="">
+                                <Image src={imageFile} className="rounded-[100%] w-[100px] object-cover h-[100px] " width={500} height={800} alt="" />
+                            </div>}
+                            <textarea value={data.message} onChange={(e) => setData({ ...data, message: e.target.value })} className='w-full h-[200px] bg-transparent border-[1px] p-3 focus:outline-none text-white' />
+                            <Button
                                 text={"Submit"}
-                                btnStyle={"bg-orange-200 text-black text-[14px] font-[500] w-full p-3"} 
+                                btnStyle={"bg-orange-200 text-black text-[14px] font-[500] w-full p-3"}
+                                onBtnClick={()=>{
+                                    console.log("Submitting Testimony", data);
+                                    handleSubmitTestimony();
+                                }}
+                                loading={isLoading}
                             />
                         </div>
                     </div>
