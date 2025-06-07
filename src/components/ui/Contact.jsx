@@ -50,7 +50,7 @@ const Contact = () => {
         <div className='m-auto md:w-[90%] grid place-items-center'>
             <div className='flex md:flex-row flex-col items-center md:text-left text-center justify-center md:gap-8 gap-16'>
                 <div className='flex-[1]'>
-                    <Image style={{boxShadow: '-35px 40px 2px 5px #fed7aa'}} src={'https://res.cloudinary.com/samueladexcloudinary/image/upload/v1739556400/Group_19_uuyz7i.png'} width={500} height={500} alt='' className='w-[300px] m-auto' />
+                    <Image style={{boxShadow: '-35px 40px 2px 5px #fed7aa'}} src={'https://res.cloudinary.com/samueladexcloudinary/image/upload/f_auto/q_auto/v1749301774/Group_19_3_ztpbqi.png'} width={500} height={500} alt='' className='w-[300px] m-auto' />
                 </div>
 
                 <div className='flex-[1]'>

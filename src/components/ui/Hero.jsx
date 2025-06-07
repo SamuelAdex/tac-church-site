@@ -10,9 +10,9 @@ const Hero = () => {
   const [isPaymentModal, setIsPaymentmodal] = useState(false);
   return (
     <div className='hero h-[100vh] grid place-items-center'>
-        <div className='md:w-[90%] md:p-0 p-5 m-auto space-y-3'>
-            <div className='text-white md:text-[18px] text-[14px] semibold'>WELCOME TO THE ARENA OF CHAMPIONS</div>
-            <div style={{fontWeight: 'GeneralSansBold', fontWeight: 'bolder'}} className='md:text-[62px] text-[32px] md:w-[950px] w-full uppercase text-white md:leading-[65px] leading-[40px] bold'>The Church with a difference, raising Champions for Global Impact</div>
+        <div className='md:w-[90%] md:p-0 p-5 m-auto md:space-y-3 space-y-2'>
+            <div className='text-white md:text-[18px] text-[12px] semibold'>WELCOME TO THE ARENA OF CHAMPIONS</div>
+            <div style={{fontWeight: 'GeneralSansBold', fontWeight: 'bolder'}} className='md:text-[62px] text-[25px] md:w-[98%] w-full uppercase text-white md:leading-[65px] leading-[32px] bold'>The Church with a difference, raising Champions for Global Impact</div>
             <p className='md:text-[18px] font-[500] md:w-[350px] text-white'>POINTING PEOPLE TO THE LIFE OF A CHAMPION</p>
             {/* <p className='md:text-[18px] font-[500] md:w-[350px] text-white'>Know God, find location, discover purpose and make a difference.</p> */}
 

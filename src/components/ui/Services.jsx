@@ -8,9 +8,9 @@ import Button from '../elements/Button';
 const Services = () => {
   return (
     <div className='bg-white grid place-items-center md:p-16'>
-        <div className='bg-gray-100 md:w-[90%] w-full space-y-24 p-12 rounded-[20px]'>
+        <div className='bg-gray-100 md:w-[90%] w-full space-y-24 md:p-12 p-6 rounded-[20px]'>
             <div className='flex md:flex-row flex-col items-center justify-center gap-[30px]'>
-                <div className='flex-[1] space-y-5'>
+                <div className='flex-[1] md:space-y-5 space-y-1'>
                     <div className='md:text-[32px] semibold'>UNIFIED SERVICE</div>
                     <p className=''>{"Our Unified Services (Combined Services) take place on rare occasions, especially during our mid-year or end-of-year thanksgiving services, and also during the grand finale of any of our programs. It's usually two services: First Service - 7:30 AM, and Second Service - 9:30 AM."}</p>
                     <Button 
@@ -26,7 +26,7 @@ const Services = () => {
                 </div>
             </div>
             <div className='flex md:flex-row flex-col-reverse items-center justify-center gap-[30px]'>
-                <div style={{background: "linear-gradient(-180deg, rgba(0, 0, 0, 0.4) 60.31%, rgba(0, 0, 0, 0.9) 100%), url('https://res.cloudinary.com/samueladexcloudinary/image/upload/v1748796495/FB_IMG_1748600157726_sltztm.jpg')", backgroundSize: "80%", backgroundRepeat: 'no-repeat'}} className='relative md:flex-[1.3] md:w-auto w-full h-[350px]'>
+                <div style={{background: "linear-gradient(-180deg, rgba(0, 0, 0, 0.4) 60.31%, rgba(0, 0, 0, 0.9) 100%), url('https://res.cloudinary.com/samueladexcloudinary/image/upload/v1748796495/FB_IMG_1748600157726_sltztm.jpg')", backgroundSize: 'cover', backgroundRepeat: 'no-repeat'}} className='relative md:flex-[1.3] md:w-auto w-full h-[350px]'>
                     <div className='absolute p-6 md:w-[400px] w-full text-white'>
                         <div className='md:text-[40px] text-[28px] md:leading-[40px] leading-[30px] bold'>FIVE Services: 1hr:10mins for Each Service</div>
                     </div>

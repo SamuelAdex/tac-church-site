@@ -176,6 +176,7 @@ const Testimonial = () => {
                 setImageFile(url);  // Set the image URL from the response
                 setImagePublicId(publicId)
                 console.log("Image public Id: ", { url, publicId });
+                toast("Image uploaded successfully");
             } catch (err) {
                 toast('Error uploading image');
                 console.error(err);
@@ -215,9 +216,9 @@ const Testimonial = () => {
                                             <p className='font-[700] text-orange-200 md:text-[30px]'>By ~ {payloads[tag]?.by}</p>
                                             <div className='text-white md:text-[50px] font-[600 ] text-[16px] overflow-auto md:h-[50vh] h-[30vh]'><q>{payloads[tag].message}</q></div>
                                         </div>
-                                        <div className='md:flex-[2] md:flex hidden'>
+                                        <div className='md:flex-[2]'>
                                             {payloads[tag]?.fileLink ? (
-                                                <Image src={payloads[tag]?.fileLink} alt='' className='' />
+                                                <Image src={payloads[tag]?.fileLink} alt='' className='object-cover h-[500px]' />
                                             ) : (
                                                 <div className='bg-gray-500 w-full h-[500px]'></div>
                                             )}
@@ -255,8 +256,8 @@ const Testimonial = () => {
                                 setImageFile("");
                                 setImagePublicId("");
                             }} className="text-orange-200 absolute right-[-20px] top-[-20px] text-[30px] cursor-pointer" />
-                            <div className="text-white text-[16px] font-[600]">Dearly Beloved, Share Your Testimony With Us</div>
-                            <p className="text-[20px] font-[500] text-gray-400">Let others be inspired by the Goodness of the Lord in your Life and Everything that concerns you.</p>
+                            <div className="text-white md:text-[16px] text-[14px] font-[600]">Dearly Beloved, Share Your Testimony With Us</div>
+                            <p className="md:text-[20px] text-[12px] font-[500] text-gray-400">Let others be inspired by the Goodness of the Lord in your Life and Everything that concerns you.</p>
                         </div>
                         <div className="space-y-4">
                             <div className="flex flex-col gap-1">
@@ -268,7 +269,7 @@ const Testimonial = () => {
                                 <label htmlFor="image-upload" className="rounded-[10px] md:h-[80px] p-8 border-[2.7px] border-dashed bg-red-50 grid place-items-center">
                                     <div className="text-center flex flex-col items-center justify-center">
                                         <GrCloudUpload className="text-2xl" />
-                                        <div className="w-[200px] text-sm">Upload your Image (optional)</div>
+                                        <div className={`w-[200px] text-sm ${uploading && 'animate-pulse'}`}>{uploading ? "Your Picure Is Uploading, please wait" : "Upload your Image (optional)"}</div>
                                     </div>
                                 </label>
                             </div>}
@@ -281,7 +282,7 @@ const Testimonial = () => {
                             {imageFile && <div className="">
                                 <Image src={imageFile} className="rounded-[100%] w-[100px] object-cover h-[100px] " width={500} height={800} alt="" />
                             </div>}
-                            <textarea value={data.message} onChange={(e) => setData({ ...data, message: e.target.value })} className='w-full h-[200px] bg-transparent border-[1px] p-3 focus:outline-none text-white' />
+                            <textarea placeholder='Enter your testimony' value={data.message} onChange={(e) => setData({ ...data, message: e.target.value })} className='w-full md:h-[200px] h-[150px] bg-transparent border-[1px] p-3 focus:outline-none text-white' />
                             <Button
                                 text={"Submit"}
                                 btnStyle={"bg-orange-200 text-black text-[14px] font-[500] w-full p-3"}
