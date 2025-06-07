@@ -74,12 +74,12 @@ const Testimonial = () => {
 
     // Function to handle previous testimony
     const handlePrev = () => {
-        handleTagSwitch((tag - 1 + testimonies.length) % testimonies.length);
+        handleTagSwitch((tag - 1 + payloads.length) % payloads.length);
     };
 
     // Function to handle next testimony
     const handleNext = () => {
-        handleTagSwitch((tag + 1) % testimonies.length);
+        handleTagSwitch((tag + 1) % payloads.length);
     };
 
 
@@ -212,12 +212,12 @@ const Testimonial = () => {
                                 {payloads.length > 0 ? (
                                     <>
                                         <div className='text-center md:flex-[3]'>
-                                            <p className='font-[700] text-orange-200 md:text-[30px]'>By ~ Sis. Debbie</p>
+                                            <p className='font-[700] text-orange-200 md:text-[30px]'>By ~ {payloads[tag]?.by}</p>
                                             <div className='text-white md:text-[50px] font-[600 ] text-[16px] overflow-auto md:h-[50vh] h-[30vh]'><q>{payloads[tag].message}</q></div>
                                         </div>
                                         <div className='md:flex-[2] md:flex hidden'>
-                                            {payloads[tag].file ? (
-                                                <Image src={payloads[tag].file} alt='' className='' />
+                                            {payloads[tag]?.fileLink ? (
+                                                <Image src={payloads[tag]?.fileLink} alt='' className='' />
                                             ) : (
                                                 <div className='bg-gray-500 w-full h-[500px]'></div>
                                             )}
