@@ -16,10 +16,10 @@ const About = () => {
                 <div className='md:text-[35px] semibold font-[700]'><span className='text-orange-200 semibold'>We Believe In</span> Our Vision and Our Mission</div>
                 <div className='flex md:flex-row flex-col gap-[20px]'>
                     {/* <Image src={imgBg} alt="" className='md:w-[300px] w-full object-cover shadow-md' /> */}
-                    <div style={{background: "linear-gradient(-180deg, rgba(0, 0, 0, 0.4) 20.31%, rgba(0, 0, 0, 0.9) 100%), url('https://res.cloudinary.com/samueladexcloudinary/image/upload/v1739630097/IMG_9215_w8ophl.jpg')", backgroundSize: 'cover', backgroundRepeat: "no-repeat"}} className='relative md:flex-[1] md:w-[300px] w-full h-[400px]'></div>
+                    <div style={{backgroundImage: "linear-gradient(-180deg, rgba(0, 0, 0, 0.2) 60.31%, rgba(0, 0, 0, 0.9) 100%), url('https://res.cloudinary.com/samueladexcloudinary/image/upload/v1749296051/IMG-20250104-WA0057_copy_16_m8502e.png')", backgroundSize: 'cover', backgroundRepeat: "no-repeat", backgroundPositionY: "40px"}} className='relative bg-black md:flex-[1] md:w-[300px] w-full h-[400px]'></div>
                     <div className='space-y-3 md:flex-[1.6]'>
                         <p className='md:text-[16px] text-[14px]'>{"To provide a platform for prsonal and spiritual growth, skill development/mastery, and mentorship. Enquipping individuals to become champions in their fields, and ambassadors of hope and love in a world in need of God's presence"}</p>
-                        <div style={{background: "linear-gradient(-180deg, rgba(0, 0, 0, 0.4) 20.31%, rgba(0, 0, 0, 0.9) 100%), url('https://res.cloudinary.com/samueladexcloudinary/image/upload/v1739548970/WhatsApp_Image_2024-09-26_at_11.30.07_PM_2_zaq9me.jpg')", backgroundSize: 'cover'}} className='relative w-full h-[315px]'>
+                        <div style={{backgroundImage: "linear-gradient(-180deg, rgba(0, 0, 0, 0.2) 60.31%, rgba(0, 0, 0, 0.9) 100%), url('https://res.cloudinary.com/samueladexcloudinary/image/upload/v1749296054/WhatsApp_Image_2024-08-29_at_13.12.17_a44be71e_copy_10_mvsfei.png')", backgroundSize: 'cover'}} className='relative w-full bg-black h-[315px]'>
                         
                         </div>
                         {/* <Image src={imgBg} alt='' className='h-[200px] object-cover shadow-md' /> */}

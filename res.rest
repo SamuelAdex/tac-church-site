@@ -1,0 +1,5 @@
+###
+GET https://thechamps-dl-admin.vercel.app/api/testimony
+
+###
+GET  http://localhost:3002/api/testimony

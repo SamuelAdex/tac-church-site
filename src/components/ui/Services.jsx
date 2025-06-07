@@ -18,7 +18,7 @@ const Services = () => {
                         btnStyle={"bg-orange-200 text-black p-3"}
                     />
                 </div>
-                <div style={{background: "linear-gradient(-180deg, rgba(0, 0, 0, 0.4) 60.31%, rgba(0, 0, 0, 0.9) 100%), url('https://res.cloudinary.com/samueladexcloudinary/image/upload/v1739548970/WhatsApp_Image_2024-09-27_at_7.38.51_AM_ht4rsk.jpg')", backgroundSize: 'cover'}} className='relative md:flex-[1.3] md:w-auto w-full h-[350px]'>
+                <div style={{background: "linear-gradient(-180deg, rgba(0, 0, 0, 0.4) 60.31%, rgba(0, 0, 0, 0.9) 100%), url('https://res.cloudinary.com/samueladexcloudinary/image/upload/v1748796521/FB_IMG_1748600940909_rdtzlu.jpg')", backgroundSize: 'cover'}} className='relative md:flex-[1.3] md:w-auto w-full h-[350px]'>
                     <div className='absolute p-6 md:w-[350px] w-full text-white'>
                         <div className='md:text-[40px] text-[28px] md:leading-[40px] leading-[30px] bold'>Two Services: 2hrs For Each Service</div>
                     </div>
@@ -26,7 +26,7 @@ const Services = () => {
                 </div>
             </div>
             <div className='flex md:flex-row flex-col-reverse items-center justify-center gap-[30px]'>
-                <div style={{background: "linear-gradient(-180deg, rgba(0, 0, 0, 0.4) 60.31%, rgba(0, 0, 0, 0.9) 100%), url('https://res.cloudinary.com/samueladexcloudinary/image/upload/v1739548970/WhatsApp_Image_2024-09-26_at_11.30.07_PM_2_zaq9me.jpg')", backgroundSize: 'cover'}} className='relative md:flex-[1.3] md:w-auto w-full h-[350px]'>
+                <div style={{background: "linear-gradient(-180deg, rgba(0, 0, 0, 0.4) 60.31%, rgba(0, 0, 0, 0.9) 100%), url('https://res.cloudinary.com/samueladexcloudinary/image/upload/v1748796495/FB_IMG_1748600157726_sltztm.jpg')", backgroundSize: "80%", backgroundRepeat: 'no-repeat'}} className='relative md:flex-[1.3] md:w-auto w-full h-[350px]'>
                     <div className='absolute p-6 md:w-[400px] w-full text-white'>
                         <div className='md:text-[40px] text-[28px] md:leading-[40px] leading-[30px] bold'>FIVE Services: 1hr:10mins for Each Service</div>
                     </div>

@@ -4,12 +4,13 @@ import React, { useEffect, useState } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import Button from '../elements/Button';
 import Modal from '../elements/Modal';
-import { MdClose } from 'react-icons/md';
+import { MdClose, MdLink } from 'react-icons/md';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import { GrCloudUpload } from 'react-icons/gr';
 import { storeImage } from '@/utils/helpers';
 import Image from 'next/image';
+import Loader from '../elements/Loader';
 
 const Testimonial = () => {
     let [tag, setTag] = useState(0);
@@ -24,6 +25,7 @@ const Testimonial = () => {
     const [uploading, setUploading] = useState(false);
     const [imageFile, setImageFile] = useState(null);
     const [imagePublicId, setImagePublicId] = useState(null);
+    const [isError, setIsError] = useState(false);
 
     let testimonies = [
         {
@@ -81,19 +83,67 @@ const Testimonial = () => {
     };
 
 
-    const handleSubmitTestimony = async ()=> {
-        if(!data.by || !data.message || !imageFile) {
+    const printing = async () => {
+        if (!data.by || !data.message) {
             toast("Fields can't be empty");
             return;
         }
-        setIsLoading(true)
+
+    }
+
+    const fetchTestimonies = async () => {
+        setFetching(true);
+        setIsError(false);
         try {
-            const { data } = await axios.post('https://thearenaofchampions.vercel.app/api/testimony', { by: data.by, message: data.message, file: imageFile, publicId: publicId }, {
-                headers: {
-                    'Content-Type': 'application/json',
+            const { data } = await axios.get('https://thechamps-dl-admin.vercel.app/api/testimony');
+            console.log(data)
+            if (data.msg === "success") {
+                setPayloads(data.res);
+                setFetching(false);
+                setIsError(false);
+            }
+        } catch (error) {
+            const err = error.response?.data;
+            setFetching(false);
+            setIsError(true);
+            // toast(error?.message.toString());
+        }
+    }
+
+
+    useEffect(() => {
+        fetchTestimonies();
+    }, [isLoading]);
+
+
+    const handleSubmitTestimony = async () => {
+        if (!data.by || !data.message) {
+            toast("Fields can't be empty");
+            return;
+        }
+        console.log("Submitting testimony with data: ", data);
+        try {
+            setIsLoading(true);
+            const payload = {
+                by: data.by,
+                message: data.message,
+                file: imageFile,
+                publicId: imagePublicId
+            };
+            console.log("Payload to send:", payload); // Add this line
+
+            const response = await axios.post(
+                'https://thechamps-dl-admin.vercel.app/api/testimony',
+                payload,
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
                 }
-            });
-            if (data.msg == "success") {
+            );
+            console.log("Response from server:", response); // Add this line
+
+            if (response.data.msg === "success") {
                 toast("Testimony submitted successfully");
                 setData({
                     by: "",
@@ -101,12 +151,16 @@ const Testimonial = () => {
                 });
                 setIsTestimonyModal(false);
                 setIsLoading(false);
+            } else {
+                toast("Something went wrong, try again");
+                setIsLoading(false);
             }
-            setIsLoading(false);
         } catch (error) {
             const err = error.response?.data;
             setIsLoading(false);
-            toast(err?.toString());
+            toast(err?.message.toString());
+            toast(error?.message.toString());
+            console.error("Error submitting testimony:", error); // Add this line
         }
     }
 
@@ -131,26 +185,6 @@ const Testimonial = () => {
         }
     };
 
-    useEffect(() => {
-        const fetchTestimonies = async () => {
-            setFetching(true);
-            try {
-                const { data } = await axios.get('https://thearenaofchampions.vercel.app/api/testimony');
-                console.log(data)
-                if (data.msg === "success") {
-                    setPayloads(data.res);
-                    setFetching(false);
-                }
-            } catch (error) {
-                const err = error.response?.data;
-                setFetching(false);
-                toast(err?.toString());
-            }
-        }
-
-        fetchTestimonies();
-    }, [isLoading]);
-
     return (
         <>
             <div className='grid place-items-center z-40 bg-black md:h-[120vh] py-24 relative md:px-12 px-8'>
@@ -165,13 +199,37 @@ const Testimonial = () => {
                 <div className={`transition-transform duration-500 ease-in-out display items-center justify-center ${isAnimating ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-100'
                     }`}>
                     <div className='flex md:flex-row flex-col items-center justify-between w-full m-auto gap-[30px]'>
-                        <div className='text-center md:flex-[3]'>
-                            <p className='font-[700] text-orange-200 md:text-[30px]'>By ~ Sis. Debbie</p>
-                            <div className='text-white md:text-[50px] font-[600 ] text-[16px] overflow-auto md:h-[50vh] h-[30vh]'><q>{testimonies[tag].testimony}</q></div>
-                        </div>
-                        <div className='md:flex-[2] md:flex hidden'>
-                            <div className='bg-gray-500 w-full h-[500px]'></div>
-                        </div>
+                        {isError == true && (
+                            <div className='space-y-4'>
+                                <div className='text-white md:text-[20px] text-[14px] font-[500] text-center'>An error occurred while fetching testimonies. Please try again later.</div>
+                                <Button text="refresh" onBtnClick={fetchTestimonies} btnStyle={"bg-orange-200 text-black p-3 w-[100px] m-auto"} />
+                            </div>
+                        )}
+                        {isFetching ? (
+                            <Loader />
+                        ) : (
+                            <>
+                                {payloads.length > 0 ? (
+                                    <>
+                                        <div className='text-center md:flex-[3]'>
+                                            <p className='font-[700] text-orange-200 md:text-[30px]'>By ~ Sis. Debbie</p>
+                                            <div className='text-white md:text-[50px] font-[600 ] text-[16px] overflow-auto md:h-[50vh] h-[30vh]'><q>{payloads[tag].message}</q></div>
+                                        </div>
+                                        <div className='md:flex-[2] md:flex hidden'>
+                                            {payloads[tag].file ? (
+                                                <Image src={payloads[tag].file} alt='' className='' />
+                                            ) : (
+                                                <div className='bg-gray-500 w-full h-[500px]'></div>
+                                            )}
+                                        </div>
+                                    </>
+                                ) : (
+                                    <div className=''>
+                                        <div className='text-white md:text-[20px] text-[14px] font-[500] text-center'>Nothing Here Yet</div>
+                                    </div>
+                                )}
+                            </>
+                        )}
                     </div>
                 </div>
                 <div className='flex items-center gap-[30px] md:mt-0 mt-[20px]'>
@@ -188,7 +246,15 @@ const Testimonial = () => {
                 <Modal isOpen={isTestimonyModal} onCloseModal={() => setIsTestimonyModal(false)} style="top-[50px]">
                     <div className='md:w-[600px] scale-up-center w-full overflow-auto h-[600px] rounded-[12px] p-8 bg-black'>
                         <div className="relative">
-                            <MdClose onClick={() => setIsTestimonyModal(false)} className="text-orange-200 absolute right-[-20px] top-[-20px] text-[30px] cursor-pointer" />
+                            <MdClose onClick={() => {
+                                setData({
+                                    by: "",
+                                    message: "",
+                                });
+                                setIsTestimonyModal(false);
+                                setImageFile("");
+                                setImagePublicId("");
+                            }} className="text-orange-200 absolute right-[-20px] top-[-20px] text-[30px] cursor-pointer" />
                             <div className="text-white text-[16px] font-[600]">Dearly Beloved, Share Your Testimony With Us</div>
                             <p className="text-[20px] font-[500] text-gray-400">Let others be inspired by the Goodness of the Lord in your Life and Everything that concerns you.</p>
                         </div>
@@ -206,6 +272,12 @@ const Testimonial = () => {
                                     </div>
                                 </label>
                             </div>}
+                            <div onClick={() => {
+                                setImageFile("");
+                                setImagePublicId("");
+                            }} className="absolute right-[5px] top-[90px] shadow-2xl shadow-slate-600 grid place-items-center bg-secondary text-white rounded-[100%] p-3">
+                                {uploading ? <Loader /> : <MdLink />}
+                            </div>
                             {imageFile && <div className="">
                                 <Image src={imageFile} className="rounded-[100%] w-[100px] object-cover h-[100px] " width={500} height={800} alt="" />
                             </div>}
@@ -213,8 +285,7 @@ const Testimonial = () => {
                             <Button
                                 text={"Submit"}
                                 btnStyle={"bg-orange-200 text-black text-[14px] font-[500] w-full p-3"}
-                                onBtnClick={()=>{
-                                    console.log("Submitting Testimony", data);
+                                onBtnClick={async () => {
                                     handleSubmitTestimony();
                                 }}
                                 loading={isLoading}
