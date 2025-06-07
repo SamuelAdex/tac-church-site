@@ -149,6 +149,8 @@ const Testimonial = () => {
                     by: "",
                     message: "",
                 });
+                setImageFile("");
+                setImagePublicId("");
                 setIsTestimonyModal(false);
                 setIsLoading(false);
             } else {
@@ -244,7 +246,15 @@ const Testimonial = () => {
             </div>
 
             {isTestimonyModal && (
-                <Modal isOpen={isTestimonyModal} onCloseModal={() => setIsTestimonyModal(false)} style="top-[50px]">
+                <Modal isOpen={isTestimonyModal} onCloseModal={() => {
+                    setImageFile("");
+                    setImagePublicId("");
+                    setIsTestimonyModal(false);
+                    setData({
+                        by: "",
+                        message: "",
+                    });
+                }} style="top-[50px]">
                     <div className='md:w-[600px] scale-up-center w-full overflow-auto h-[600px] rounded-[12px] p-8 bg-black'>
                         <div className="relative">
                             <MdClose onClick={() => {
