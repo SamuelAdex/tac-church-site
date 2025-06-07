@@ -55,7 +55,7 @@ const Contact = () => {
 
                 <div className='flex-[1]'>
                     <div className='text-white md:w-[500px] md:leading-[60px] leading-[35px] md:text-[60px] text-[32px] bold'>Our Father. Our Covering. Our Mentor</div>
-                    <p className='text-gray-200 md:w-[500px] mt-2'>Bishop Moses Anozie is a seasoned apostolic voice and a dynamic servant of God, called and anointed to raise global champions for Christ. With decades of impactful ministry, he is known for his uncompromising stand on the Word of God, prophetic accuracy, and a deep passion for souls. As the Presiding Bishop of The Arena Of Champions, Bishop Anozie carries a rare grace for deliverance, revival, and impartation, transforming lives and territories through the power of the Holy Spirit. His ministry is marked by undeniable signs, wonders, and manifestations of God’s glory, making him a trusted father and mentor to many in the body of Christ.</p>
+                    <p className='text-gray-200 md:w-[500px] mt-2'>Bishop Moses Anozie is a seasoned apostolic voice and a dynamic servant of God, called and anointed to raise global champions for Christ. With decades of impactful ministry, he is known for his uncompromising stand on the Word of God, prophetic accuracy, and a deep passion for souls. As the Presiding Bishop of The Arena Of Champions, Bishop Anozie carries a rare grace for deliverance, revival, impartation and leadership, transforming lives and territories through the power of the Holy Spirit. His ministry is marked by undeniable signs, wonders, and manifestations of God’s glory, making him a trusted father and mentor to many in the body of Christ.</p>
                 </div>
             </div>
         </div>
