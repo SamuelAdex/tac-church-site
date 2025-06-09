@@ -201,7 +201,7 @@ const Testimonial = () => {
                 </div>
                 <div className={`transition-transform duration-500 ease-in-out display items-center justify-center ${isAnimating ? '-translate-x-full opacity-0' : 'translate-x-0 opacity-100'
                     }`}>
-                    <div className='flex md:flex-row flex-col items-center justify-between w-full m-auto gap-[30px]'>
+                    <div className='flex md:flex-row flex-col items-center justify-between w-full m-auto md:gap-[30px]'>
                         {isError == true && (
                             <div className='space-y-4'>
                                 <div className='text-white md:text-[20px] text-[14px] font-[500] text-center'>An error occurred while fetching testimonies. Please try again later.</div>
