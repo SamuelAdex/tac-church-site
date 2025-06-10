@@ -7,6 +7,7 @@ import Hero from "@/components/ui/Hero";
 import Services from "@/components/ui/Services";
 import Showcase from "@/components/ui/Showcase";
 import Testimonial from "@/components/ui/Testimonial";
+import Training from "@/components/ui/Training";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Services />
       <Events />
       <Testimonial />
+      <Training />
       <Contact />
       <Footer />
     </>
