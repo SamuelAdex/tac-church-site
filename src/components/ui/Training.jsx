@@ -86,7 +86,7 @@ const Training = () => {
                 <div className='flex-[2] 2xl:w-[71%] w-[255%] overflow-hidden md:hidden flex mt-6 mb-2'>
                     <Swiper
                         slidesPerView={3}
-                        spaceBetween={30}
+                        spaceBetween={50}
                         // pagination={{
                         // clickable: true,
                         // }}
