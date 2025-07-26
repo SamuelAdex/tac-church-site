@@ -5,6 +5,7 @@ import React from "react";
 import event1 from "@/public/assets/img/August-2025-1.jpeg";
 import event2 from "@/public/assets/img/August-2025-2.jpeg";
 import event3 from "@/public/assets/img/August-2025-3.jpeg";
+import event4 from "@/public/assets/img/August-2025-4.jpeg";
 
 const MonthlyEvents = () => {
   return (
@@ -21,6 +22,27 @@ const MonthlyEvents = () => {
       </div>
 
       <div className="grid md:grid-cols-2 md:p-0 p-3 grid-cols-1 mt-8 gap-[30px] m-auto md:w-[70%]">
+        <div className="">
+          <Image src={event4} alt="" className="w-full" />
+          <div className="">
+            <div className="rounded-lg p-4 shadow-lg mt-4">
+              <h3 className="text-2xl bold text-black mb-2">
+                Prophetic & Anointing Service
+              </h3>
+              <div className="my-3 md:text-[16px] text-[12px]">
+                Step into a powerful atmosphere of prophecy and anointing, held on the first day of every month. This service is designed to usher you into the new month with divine direction, fresh empowerment, and spiritual breakthroughs. Experience uplifting worship, prophetic declarations, and receive anointing for the journey ahead.
+              </div>
+              <div className="flex md:text-[18px] text-[10px] items-center gap-4">
+                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                  Date: August 1, 2025
+                </span>
+                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                  Time: 7:30 AM
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="">
           <Image src={event1} alt="" className="w-full" />
           <div className="">
