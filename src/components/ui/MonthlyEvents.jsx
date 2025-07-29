@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import React from "react";
-import event1 from "@/public/assets/img/August-2025-1.jpeg";
 import event2 from "@/public/assets/img/August-2025-2.jpeg";
 import event3 from "@/public/assets/img/August-2025-3.jpeg";
 import event4 from "@/public/assets/img/August-2025-4.jpeg";
+import event5 from "@/public/assets/img/August-2025-5.jpeg";
 
 const MonthlyEvents = () => {
   return (
@@ -44,28 +44,6 @@ const MonthlyEvents = () => {
           </div>
         </div>
         <div className="">
-          <Image src={event1} alt="" className="w-full" />
-          <div className="">
-            <div className="rounded-lg p-4 shadow-lg mt-4">
-              <h3 className="text-2xl bold text-black mb-2">
-                Uncommon Favour
-              </h3>
-              <div className="my-3 md:text-[16px] text-[12px]">
-                Step into a night of divine encounter, vibrant worship, and
-                powerful prayer. Experience a fresh move of God and ignite your spirit for the new month!
-              </div>
-              <div className="flex md:text-[18px] text-[10px] items-center gap-4">
-                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
-                  Date: August 10, 2025
-                </span>
-                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
-                  Time: 7:30 AM & 9:00 AM
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="">
           <Image src={event2} alt="" className="w-full" />
           <div className="">
             <div className="rounded-lg p-4 shadow-lg mt-4">
@@ -78,6 +56,27 @@ const MonthlyEvents = () => {
               <div className="flex md:text-[18px] text-[10px] items-center gap-4">
                 <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
                   Date: August 22 - 24, 2025
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="">
+          <Image src={event5} alt="" className="w-full" />
+          <div className="">
+            <div className="rounded-lg p-4 shadow-lg mt-4">
+              <h3 className="text-2xl bold text-black mb-2">
+                Young Ministers Hangout (August Edition)
+              </h3>
+              <div className="my-3 md:text-[16px] text-[12px]">
+                Connect with fellow young ministers in an atmosphere of inspiration, mentorship, and spiritual growth. This edition features vibrant worship, practical discussions, and powerful prayers designed to ignite your passion for ministry and equip you for greater impact. Don’t miss this opportunity to be refreshed, empowered, and network with other champions.
+              </div>
+              <div className="flex md:text-[18px] text-[10px] items-center gap-4">
+                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                  Date: August 25, 2025
+                </span>
+                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                  Time: 3:30 PM
                 </span>
               </div>
             </div>
