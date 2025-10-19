@@ -2,10 +2,8 @@
 
 import Image from "next/image";
 import React from "react";
-import event2 from "@/public/assets/img/August-2025-2.jpeg";
-import event3 from "@/public/assets/img/August-2025-3.jpeg";
-import event4 from "@/public/assets/img/August-2025-4.jpeg";
-import event5 from "@/public/assets/img/August-2025-5.jpeg";
+import event1 from "@/public/assets/img/his_glory.jpeg";
+
 
 const MonthlyEvents = () => {
   return (
@@ -23,82 +21,22 @@ const MonthlyEvents = () => {
 
       <div className="grid md:grid-cols-2 md:p-0 p-3 grid-cols-1 mt-8 gap-[30px] m-auto md:w-[70%]">
         <div className="">
-          <Image src={event4} alt="" className="w-full" />
+          <Image src={event1} alt="" className="w-full" />
           <div className="">
             <div className="rounded-lg p-4 shadow-lg mt-4">
               <h3 className="text-2xl bold text-black mb-2">
-                Prophetic & Anointing Service
+                His Glory Conference 2025
               </h3>
               <div className="my-3 md:text-[16px] text-[12px]">
-                Step into a powerful atmosphere of prophecy and anointing, held on the first day of every month. This service is designed to usher you into the new month with divine direction, fresh empowerment, and spiritual breakthroughs. Experience uplifting worship, prophetic declarations, and receive anointing for the journey ahead.
+                {"Get ready for an unforgettable encounter in God’s presence on November as we gather for Hos Glory Conference 2025! It will be a 3 days divine empowerment, fresh fire, and supernatural release. Don’t miss your moment of impartation! Come with expectation. Come hungry for more of God. Your life will not remain the same! Check flier for more details!"}
               </div>
               <div className="flex md:text-[18px] text-[10px] items-center gap-4">
                 <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
-                  Date: August 1, 2025
+                  Date: November 7th, 8th & 9th 2025 (FRI - SUN)
                 </span>
-                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                {/* <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
                   Time: 7:30 AM
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="">
-          <Image src={event2} alt="" className="w-full" />
-          <div className="">
-            <div className="rounded-lg p-4 shadow-lg mt-4">
-              <h3 className="text-2xl bold text-black mb-2">
-                Refined
-              </h3>
-              <div className="my-3 md:text-[16px] text-[12px]">
-                Experience an atmosphere charged with faith, uplifting music, and heartfelt prayers. Come expecting transformation, inspiration, and a renewed sense of purpose for the month of August.
-              </div>
-              <div className="flex md:text-[18px] text-[10px] items-center gap-4">
-                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
-                  Date: August 22 - 24, 2025
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="">
-          <Image src={event5} alt="" className="w-full" />
-          <div className="">
-            <div className="rounded-lg p-4 shadow-lg mt-4">
-              <h3 className="text-2xl bold text-black mb-2">
-                Young Ministers Hangout (August Edition)
-              </h3>
-              <div className="my-3 md:text-[16px] text-[12px]">
-                Connect with fellow young ministers in an atmosphere of inspiration, mentorship, and spiritual growth. This edition features vibrant worship, practical discussions, and powerful prayers designed to ignite your passion for ministry and equip you for greater impact. Don’t miss this opportunity to be refreshed, empowered, and network with other champions.
-              </div>
-              <div className="flex md:text-[18px] text-[10px] items-center gap-4">
-                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
-                  Date: August 25, 2025
-                </span>
-                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
-                  Time: 3:30 PM
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="">
-          <Image src={event3} alt="" className="w-full" />
-          <div className="">
-            <div className="rounded-lg p-4 shadow-lg mt-4">
-              <h3 className="text-2xl bold text-black mb-2">
-                Against All Odds
-              </h3>
-              <div className="my-3 md:text-[16px] text-[12px]">
-                A celebration of resilience and faith, this program empowers you to rise above challenges and embrace victory. Join us for inspiring worship, uplifting messages, and a powerful atmosphere where impossibilities become testimonies.
-              </div>
-              <div className="flex md:text-[18px] text-[10px] items-center gap-4">
-                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
-                  Date: August 31, 2025
-                </span>
-                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
-                  Time: 7:30 AM & 9:00 AM
-                </span>
+                </span> */}
               </div>
             </div>
           </div>
