@@ -3,6 +3,7 @@
 import Image from "next/image";
 import React from "react";
 import event1 from "@/public/assets/img/his_glory.jpeg";
+import event2 from "@/public/assets/img/bridge.jpeg";
 
 
 const MonthlyEvents = () => {
@@ -20,6 +21,27 @@ const MonthlyEvents = () => {
       </div>
 
       <div className="grid md:grid-cols-2 md:p-0 p-3 grid-cols-1 mt-8 gap-[30px] m-auto md:w-[70%]">
+        <div className="">
+          <Image src={event2} alt="" className="w-full" />
+          <div className="">
+            <div className="rounded-lg p-4 shadow-lg mt-4">
+              <h3 className="text-2xl bold text-black mb-2">
+                The Bridge
+              </h3>
+              <div className="my-3 md:text-[16px] text-[12px]">
+                {"Join us for The Bridge, a transformative church program designed to connect hearts to God’s purpose and inspire believers to live out their faith with impact. This powerful gathering will feature a special guest — Engr. Chidomere Ndubuisi, a dynamic Mechanical Engineer, a speaker, visionary leader, and devoted servant of God."}
+              </div>
+              <div className="flex md:text-[18px] text-[10px] items-center gap-4">
+                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                  Date: October 26th, 2025 (SUNDAY)
+                </span>
+                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                  Time: 7:30 AM - 9:45 AM
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="">
           <Image src={event1} alt="" className="w-full" />
           <div className="">
