@@ -4,6 +4,10 @@ import Image from "next/image";
 import React from "react";
 import event1 from "@/public/assets/img/his_glory.jpeg";
 import event2 from "@/public/assets/img/bridge.jpeg";
+import anointing from "@/public/assets/img/anointing_nov.jpeg";
+import lyrics from "@/public/assets/img/lyrics_nov.jpeg";
+import miracle from "@/public/assets/img/miracle_nov.jpeg";
+import singles from "@/public/assets/img/singles_nov.jpeg";
 
 
 const MonthlyEvents = () => {
@@ -43,18 +47,81 @@ const MonthlyEvents = () => {
           </div>
         </div>
         <div className="">
-          <Image src={event1} alt="" className="w-full" />
+          <Image src={anointing} alt="" className="w-full" />
           <div className="">
             <div className="rounded-lg p-4 shadow-lg mt-4">
               <h3 className="text-2xl bold text-black mb-2">
-                His Glory Conference 2025
+                Prophetic & Anointing Service (First Day of the Month)
               </h3>
-              <div className="my-3 md:text-[16px] text-[12px]">
+              {/* <div className="my-3 md:text-[16px] text-[12px]">
                 {"Get ready for an unforgettable encounter in God’s presence on November as we gather for Hos Glory Conference 2025! It will be a 3 days divine empowerment, fresh fire, and supernatural release. Don’t miss your moment of impartation! Come with expectation. Come hungry for more of God. Your life will not remain the same! Check flier for more details!"}
-              </div>
+              </div> */}
               <div className="flex md:text-[18px] text-[10px] items-center gap-4">
                 <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
-                  Date: November 7th, 8th & 9th 2025 (FRI - SUN)
+                  Date: November 1st (7:00am)
+                </span>
+                {/* <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                  Time: 7:30 AM
+                </span> */}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="">
+          <Image src={lyrics} alt="" className="w-full" />
+          <div className="">
+            <div className="rounded-lg p-4 shadow-lg mt-4">
+              <h3 className="text-2xl bold text-black mb-2">
+                Lyrics Praise Concert (November Editon)
+              </h3>
+              {/* <div className="my-3 md:text-[16px] text-[12px]">
+                {"Get ready for an unforgettable encounter in God’s presence on November as we gather for Hos Glory Conference 2025! It will be a 3 days divine empowerment, fresh fire, and supernatural release. Don’t miss your moment of impartation! Come with expectation. Come hungry for more of God. Your life will not remain the same! Check flier for more details!"}
+              </div> */}
+              <div className="flex md:text-[18px] text-[10px] items-center gap-4">
+                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                  Date: November 2nd (4:00pm)
+                </span>
+                {/* <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                  Time: 7:30 AM
+                </span> */}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="">
+          <Image src={miracle} alt="" className="w-full" />
+          <div className="">
+            <div className="rounded-lg p-4 shadow-lg mt-4">
+              <h3 className="text-2xl bold text-black mb-2">
+                Miracle Service
+              </h3>
+              {/* <div className="my-3 md:text-[16px] text-[12px]">
+                {"Get ready for an unforgettable encounter in God’s presence on November as we gather for Hos Glory Conference 2025! It will be a 3 days divine empowerment, fresh fire, and supernatural release. Don’t miss your moment of impartation! Come with expectation. Come hungry for more of God. Your life will not remain the same! Check flier for more details!"}
+              </div> */}
+              <div className="flex md:text-[18px] text-[10px] items-center gap-4">
+                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                  Date: November 5th (5:00pm)
+                </span>
+                {/* <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                  Time: 7:30 AM
+                </span> */}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="">
+          <Image src={singles} alt="" className="w-full" />
+          <div className="">
+            <div className="rounded-lg p-4 shadow-lg mt-4">
+              <h3 className="text-2xl bold text-black mb-2">
+                Singles & Married Timeout
+              </h3>
+              {/* <div className="my-3 md:text-[16px] text-[12px]">
+                {"Get ready for an unforgettable encounter in God’s presence on November as we gather for Hos Glory Conference 2025! It will be a 3 days divine empowerment, fresh fire, and supernatural release. Don’t miss your moment of impartation! Come with expectation. Come hungry for more of God. Your life will not remain the same! Check flier for more details!"}
+              </div> */}
+              <div className="flex md:text-[18px] text-[10px] items-center gap-4">
+                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                  Date: November 28th (4:00pm)
                 </span>
                 {/* <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
                   Time: 7:30 AM
