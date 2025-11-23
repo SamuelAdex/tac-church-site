@@ -95,18 +95,35 @@ const Testimonial = () => {
         setFetching(true);
         setIsError(false);
         try {
-            const { data } = await axios.get('https://thechamps-dl-admin.vercel.app/api/testimony');
-            console.log(data)
-            if (data.msg === "success") {
+            const { data } = await axios.get(
+                'https://thechamps-dl-admin.vercel.app/api/testimony',
+                {
+                    headers: {
+                        'Cache-Control': 'no-cache',
+                        'Pragma': 'no-cache',
+                    },
+                    timeout: 10000, // 10 second timeout
+                }
+            );
+            
+            console.log('Testimonies fetched:', data);
+            
+            if (data.msg === "success" && data.res && data.res.length > 0) {
                 setPayloads(data.res);
-                setFetching(false);
+                setTag(0); // Reset to first testimony
+                setIsError(false);
+            } else {
+                setPayloads(testimonies); // Fallback to local testimonies
                 setIsError(false);
             }
-        } catch (error) {
-            const err = error.response?.data;
             setFetching(false);
-            setIsError(true);
-            // toast(error?.message.toString());
+        } catch (error) {
+            console.error('Fetch error:', error);
+            // Fallback to local testimonies if API fails
+            setPayloads(testimonies);
+            setIsError(false);
+            setFetching(false);
+            toast.warn('Using local testimonies - API temporarily unavailable');
         }
     }
 
@@ -191,10 +208,10 @@ const Testimonial = () => {
     return (
         <>
             <div className='grid place-items-center z-40 bg-black md:h-[120vh] py-24 relative md:px-12 px-8'>
-                <div className='flex md:flex-row flex-col items-center gap-2 justify-center w-full py-4'>
-                    <p className='text-gray-400 md:text-[20px] text-[12px] text-center'>Do you want to appreciate the Lord for what he has done for you?</p>
+                <div className='flex flex-col items-center gap-2 justify-center w-full py-4'>
+                    <p className='text-gray-100 md:text-[30px] md:w-[700px] uppercase bold text-[12px] text-center'>Do you want to appreciate the Lord for what he has done for you?</p>
                     <Button
-                        text={"Please share with Us!!!"}
+                        text={"Click to share with Us!!!"}
                         btnStyle={'bg-orange-200 text-black p-2 md:text-[14px] text-[12px] font-[500]'}
                         onBtnClick={() => setIsTestimonyModal(!isTestimonyModal)}
                     />
