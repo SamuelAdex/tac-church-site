@@ -95,35 +95,18 @@ const Testimonial = () => {
         setFetching(true);
         setIsError(false);
         try {
-            const { data } = await axios.get(
-                'https://thechamps-dl-admin.vercel.app/api/testimony',
-                {
-                    headers: {
-                        'Cache-Control': 'no-cache',
-                        'Pragma': 'no-cache',
-                    },
-                    timeout: 10000, // 10 second timeout
-                }
-            );
-            
-            console.log('Testimonies fetched:', data);
-            
-            if (data.msg === "success" && data.res && data.res.length > 0) {
+            const { data } = await axios.get('/api/testimony');
+            console.log(data)
+            if (data.msg === "success") {
                 setPayloads(data.res);
-                setTag(0); // Reset to first testimony
-                setIsError(false);
-            } else {
-                setPayloads(testimonies); // Fallback to local testimonies
+                setFetching(false);
                 setIsError(false);
             }
-            setFetching(false);
         } catch (error) {
-            console.error('Fetch error:', error);
-            // Fallback to local testimonies if API fails
-            setPayloads(testimonies);
-            setIsError(false);
+            const err = error.response?.data;
             setFetching(false);
-            toast.warn('Using local testimonies - API temporarily unavailable');
+            setIsError(true);
+            // toast(error?.message.toString());
         }
     }
 
@@ -150,7 +133,7 @@ const Testimonial = () => {
             console.log("Payload to send:", payload); // Add this line
 
             const response = await axios.post(
-                'https://thechamps-dl-admin.vercel.app/api/testimony',
+                '/api/testimony',
                 payload,
                 {
                     headers: {
@@ -237,7 +220,7 @@ const Testimonial = () => {
                                         </div>
                                         <div className='md:flex-[2]'>
                                             {payloads[tag]?.fileLink ? (
-                                                <Image src={payloads[tag]?.fileLink} alt='' className='object-cover h-[500px]' />
+                                                <Image src={payloads[tag]?.fileLink} width={300} height={300} alt='' className='object-cover h-[500px]' />
                                             ) : (
                                                 <div className='bg-gray-500 w-full h-[500px]'></div>
                                             )}
