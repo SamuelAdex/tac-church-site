@@ -220,9 +220,9 @@ const Testimonial = () => {
                                         </div>
                                         <div className='md:flex-[2]'>
                                             {payloads[tag]?.fileLink ? (
-                                                <Image src={payloads[tag]?.fileLink} width={300} height={300} alt='' className='object-cover h-[500px]' />
+                                                <Image src={payloads[tag]?.fileLink} width={300} height={300} alt='' className='object-cover md:flex hidden h-[500px]' />
                                             ) : (
-                                                <div className='bg-gray-500 w-full h-[500px]'></div>
+                                                <div className='bg-gray-500 w-full md:flex hidden h-[500px]'></div>
                                             )}
                                         </div>
                                     </>
