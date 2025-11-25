@@ -24,83 +24,20 @@ const MonthlyEvents = () => {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 md:p-0 p-3 grid-cols-1 mt-8 gap-[30px] m-auto md:w-[70%]">
+      <div className="grid md:grid-cols-2 md:p-0 p-3 grid-cols-1 mt-8 gap-[30px] m-auto md:w-[70%]">        
         <div className="">
-          <Image src={event2} alt="" className="w-full" />
+          <Image src={"https://res.cloudinary.com/samueladexcloudinary/image/upload/f_auto/q_auto/v1764079911/WhatsApp_Image_2025-11-25_at_3.08.22_PM_1_gu0rnt.jpg"} width={300} height={300} alt="" className="w-full" />
           <div className="">
             <div className="rounded-lg p-4 shadow-lg mt-4">
               <h3 className="text-2xl bold text-black mb-2">
-                The Bridge
-              </h3>
-              <div className="my-3 md:text-[16px] text-[12px]">
-                {"Join us for The Bridge, a transformative church program designed to connect hearts to God’s purpose and inspire believers to live out their faith with impact. This powerful gathering will feature a special guest — Engr. Chidomere Ndubuisi, a dynamic Mechanical Engineer, a speaker, visionary leader, and devoted servant of God."}
-              </div>
-              <div className="flex md:text-[18px] text-[10px] items-center gap-4">
-                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
-                  Date: October 26th, 2025 (SUNDAY)
-                </span>
-                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
-                  Time: 7:30 AM - 9:45 AM
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="">
-          <Image src={anointing} alt="" className="w-full" />
-          <div className="">
-            <div className="rounded-lg p-4 shadow-lg mt-4">
-              <h3 className="text-2xl bold text-black mb-2">
-                Prophetic & Anointing Service (First Day of the Month)
+                Silencing Evil Altars
               </h3>
               {/* <div className="my-3 md:text-[16px] text-[12px]">
                 {"Get ready for an unforgettable encounter in God’s presence on November as we gather for Hos Glory Conference 2025! It will be a 3 days divine empowerment, fresh fire, and supernatural release. Don’t miss your moment of impartation! Come with expectation. Come hungry for more of God. Your life will not remain the same! Check flier for more details!"}
               </div> */}
               <div className="flex md:text-[18px] text-[10px] items-center gap-4">
                 <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
-                  Date: November 1st (7:00am)
-                </span>
-                {/* <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
-                  Time: 7:30 AM
-                </span> */}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="">
-          <Image src={lyrics} alt="" className="w-full" />
-          <div className="">
-            <div className="rounded-lg p-4 shadow-lg mt-4">
-              <h3 className="text-2xl bold text-black mb-2">
-                Lyrics Praise Concert (November Editon)
-              </h3>
-              {/* <div className="my-3 md:text-[16px] text-[12px]">
-                {"Get ready for an unforgettable encounter in God’s presence on November as we gather for Hos Glory Conference 2025! It will be a 3 days divine empowerment, fresh fire, and supernatural release. Don’t miss your moment of impartation! Come with expectation. Come hungry for more of God. Your life will not remain the same! Check flier for more details!"}
-              </div> */}
-              <div className="flex md:text-[18px] text-[10px] items-center gap-4">
-                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
-                  Date: November 2nd (4:00pm)
-                </span>
-                {/* <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
-                  Time: 7:30 AM
-                </span> */}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="">
-          <Image src={miracle} alt="" className="w-full" />
-          <div className="">
-            <div className="rounded-lg p-4 shadow-lg mt-4">
-              <h3 className="text-2xl bold text-black mb-2">
-                Miracle Service
-              </h3>
-              {/* <div className="my-3 md:text-[16px] text-[12px]">
-                {"Get ready for an unforgettable encounter in God’s presence on November as we gather for Hos Glory Conference 2025! It will be a 3 days divine empowerment, fresh fire, and supernatural release. Don’t miss your moment of impartation! Come with expectation. Come hungry for more of God. Your life will not remain the same! Check flier for more details!"}
-              </div> */}
-              <div className="flex md:text-[18px] text-[10px] items-center gap-4">
-                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
-                  Date: November 5th (5:00pm)
+                  Date: November 26th (5:00pm)
                 </span>
                 {/* <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
                   Time: 7:30 AM
@@ -126,6 +63,69 @@ const MonthlyEvents = () => {
                 {/* <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
                   Time: 7:30 AM
                 </span> */}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="">
+          <Image src={"https://res.cloudinary.com/samueladexcloudinary/image/upload/f_auto/q_auto/v1764079911/WhatsApp_Image_2025-11-25_at_10.23.41_AM_bavmol.jpg"} width={300} height={300} alt="" className="w-full" />
+          <div className="">
+            <div className="rounded-lg p-4 shadow-lg mt-4">
+              <h3 className="text-2xl bold text-black mb-2">
+                Impartation Services
+              </h3>
+              <div className="my-3 md:text-[16px] text-[12px]">
+                {/* {"Join us for The Bridge, a transformative church program designed to connect hearts to God’s purpose and inspire believers to live out their faith with impact. This powerful gathering will feature a special guest — Engr. Chidomere Ndubuisi, a dynamic Mechanical Engineer, a speaker, visionary leader, and devoted servant of God."} */}
+              </div>
+              <div className="flex md:text-[18px] text-[10px] items-center gap-4">
+                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                  Date: November 30th, 2025 (SUNDAY)
+                </span>
+                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                  Time: 7:30 AM - 9:30 AM
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="">
+          <Image src={"https://res.cloudinary.com/samueladexcloudinary/image/upload/f_auto/q_auto/v1764079912/WhatsApp_Image_2025-11-25_at_3.08.22_PM_vlnogz.jpg"} width={300} height={300} alt="" className="w-full" />
+          <div className="">
+            <div className="rounded-lg p-4 shadow-lg mt-4">
+              <h3 className="text-2xl bold text-black mb-2">
+                Lyrics Praise Concert
+              </h3>
+              <div className="my-3 md:text-[16px] text-[12px]">
+                {/* {"Join us for The Bridge, a transformative church program designed to connect hearts to God’s purpose and inspire believers to live out their faith with impact. This powerful gathering will feature a special guest — Engr. Chidomere Ndubuisi, a dynamic Mechanical Engineer, a speaker, visionary leader, and devoted servant of God."} */}
+              </div>
+              <div className="flex md:text-[18px] text-[10px] items-center gap-4">
+                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                  Date: December 7th, 2025 (SUNDAY)
+                </span>
+                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                  Time: 4:00 PM
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="">
+          <Image src={"https://res.cloudinary.com/samueladexcloudinary/image/upload/f_auto/q_auto/v1764079911/WhatsApp_Image_2025-11-25_at_10.23.41_AM_1_bnoxey.jpg"} width={300} height={300} alt="" className="w-full" />
+          <div className="">
+            <div className="rounded-lg p-4 shadow-lg mt-4">
+              <h3 className="text-2xl bold text-black mb-2">
+                Thanksgiving Service
+              </h3>
+              <div className="my-3 md:text-[16px] text-[12px]">
+                {/* {"Join us for The Bridge, a transformative church program designed to connect hearts to God’s purpose and inspire believers to live out their faith with impact. This powerful gathering will feature a special guest — Engr. Chidomere Ndubuisi, a dynamic Mechanical Engineer, a speaker, visionary leader, and devoted servant of God."} */}
+              </div>
+              <div className="flex md:text-[18px] text-[10px] items-center gap-4">
+                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                  Date: December 14th, 2025 (SUNDAY)
+                </span>
+                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
+                  Time: 7:30 AM - 9:30 AM
+                </span>
               </div>
             </div>
           </div>
