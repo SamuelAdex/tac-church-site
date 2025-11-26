@@ -40,6 +40,8 @@ const Footer = () => {
                     <Link href={"#about"} className='md:text-[13px] text-[11px] font-[500]'>About</Link>
                     <Link href={"#events"} className='md:text-[13px] text-[11px] font-[500]'>Events</Link>
                     <Link href={"#contact"} className='md:text-[13px] text-[11px] font-[500]'>Prayer Request</Link>
+                    <Link href={"/privacy-policy"} className='md:text-[13px] text-[11px] font-[500]'>Privacy Policy</Link>
+                    <Link href={"/terms-and-conditions"} className='md:text-[13px] text-[11px] font-[500]'>Terms and Conditions</Link>
                 </div>
                 <div className='flex flex-col space-y-2'>
                     <div className='semibold md:text-[14px] text-[12px]'>SPECIALS</div>

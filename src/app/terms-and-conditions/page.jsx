@@ -14,7 +14,7 @@ export default function TermsAndConditions() {
         <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8">
           {/* Header */}
           <div className="mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-2">Terms and Conditions</h1>
+            <h1 className="text-4xl bold text-gray-900 mb-2">Terms and Conditions</h1>
             <p className="text-gray-600">The Champs Digital Library (TCDL)</p>
             <p className="text-sm text-gray-500 mt-2">Last Updated: November 26, 2025</p>
           </div>
