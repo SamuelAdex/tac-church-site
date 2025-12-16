@@ -26,27 +26,6 @@ const MonthlyEvents = () => {
 
       <div className="grid md:grid-cols-2 md:p-0 p-3 grid-cols-1 mt-8 gap-[30px] m-auto md:w-[70%]">        
         <div className="">
-          <Image src={"https://res.cloudinary.com/samueladexcloudinary/image/upload/f_auto/q_auto/v1764079911/WhatsApp_Image_2025-11-25_at_3.08.22_PM_1_gu0rnt.jpg"} width={300} height={300} alt="" className="w-full" />
-          <div className="">
-            <div className="rounded-lg p-4 shadow-lg mt-4">
-              <h3 className="text-2xl bold text-black mb-2">
-                Silencing Evil Altars
-              </h3>
-              {/* <div className="my-3 md:text-[16px] text-[12px]">
-                {"Get ready for an unforgettable encounter in God’s presence on November as we gather for Hos Glory Conference 2025! It will be a 3 days divine empowerment, fresh fire, and supernatural release. Don’t miss your moment of impartation! Come with expectation. Come hungry for more of God. Your life will not remain the same! Check flier for more details!"}
-              </div> */}
-              <div className="flex md:text-[18px] text-[10px] items-center gap-4">
-                <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
-                  Date: November 26th (5:00pm)
-                </span>
-                {/* <span className="bg-white text-gray-600 px-3 py-1 rounded-full font-semibold shadow">
-                  Time: 7:30 AM
-                </span> */}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="">
           <Image src={singles} alt="" className="w-full" />
           <div className="">
             <div className="rounded-lg p-4 shadow-lg mt-4">

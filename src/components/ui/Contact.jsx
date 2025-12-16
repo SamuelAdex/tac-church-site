@@ -36,6 +36,7 @@ const Contact = () => {
           setIsLoading(false);
           toast("Prayer Request Sent Successfully");
           console.log('SUCCESS!');
+          if (form.current) form.current.reset();
         } 
       )
       .catch((error) => {
