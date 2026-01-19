@@ -4,6 +4,7 @@ const nextConfig = {
 		domains: [
 			"https://res.cloudinary.com",
 			"res.cloudinary.com",
+            "paystack.com",
 		],
 	},
     async headers() {

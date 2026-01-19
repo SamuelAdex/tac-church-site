@@ -53,7 +53,7 @@ const Declaration = () => {
                         21 Days of Declaration, Fasting, Worship and Praise
                     </div>
                     <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 uppercase tracking-tight">
-                        Declare God's Word <span className="text-orange-200">Over Your Life</span>
+                        Declare God&apos;s Word <span className="text-orange-200">Over Your Life</span>
                     </h2>
                     <p className="text-gray-400 max-w-2xl mx-auto text-lg">
                         Death and life are in the power of the tongue. Speak these words of faith and watch God transform your reality.
@@ -78,7 +78,7 @@ const Declaration = () => {
                                     
                                     <div className="relative z-10">
                                         <p className="text-xl md:text-2xl text-white font-medium leading-relaxed mb-8 italic whitespace-pre-line">
-                                            "{dec.text}"
+                                            &quot;{dec.text}&quot;
                                         </p>
                                         <div className="h-1 w-20 bg-orange-200 mx-auto mb-6"></div>
                                     </div>
@@ -90,7 +90,7 @@ const Declaration = () => {
 
                 <div className="text-center mt-8">
                     <p className="text-gray-500 text-sm">
-                        "For with the heart man believeth unto righteousness; and with the mouth confession is made unto salvation." - Romans 10:10
+                        &quot;For with the heart man believeth unto righteousness; and with the mouth confession is made unto salvation.&quot; - Romans 10:10
                     </p>
                 </div>
             </div>

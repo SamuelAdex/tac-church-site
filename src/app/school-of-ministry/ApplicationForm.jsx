@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
+import Image from 'next/image';
 import { toast } from 'react-toastify';
 import { useRouter } from 'next/navigation';
 import Button from '@/components/elements/Button';
@@ -398,7 +399,7 @@ const ApplicationForm = () => {
                                 loading={loading}
                             />
                             <div className="flex items-center justify-center gap-2 mt-6 opacity-60">
-                                <img src="https://paystack.com/assets/img/og/paystack-logo.png" alt="Paystack" className="h-4" />
+                                <Image src="https://paystack.com/assets/img/og/paystack-logo.png" alt="Paystack" width={80} height={16} className="h-4 w-auto object-contain" />
                                 <span className="text-xs font-bold text-gray-500 uppercase tracking-tighter">Secured by Paystack</span>
                             </div>
                         </div>
