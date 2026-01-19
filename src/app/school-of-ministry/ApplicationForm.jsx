@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation';
 import Button from '@/components/elements/Button';
 import { IoMdCheckmarkCircle } from 'react-icons/io';
 
-const APPLICATION_FEE = 15000; // 15,000 Naira
+const APPLICATION_FEE = 20000; // 20,000 Naira
 
 const ApplicationForm = () => {
     const router = useRouter();

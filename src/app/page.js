@@ -1,4 +1,5 @@
 import About from "@/components/ui/About";
+import Declaration from "@/components/ui/Declaration";
 import Branches from "@/components/ui/Branches";
 import Contact from "@/components/ui/Contact";
 import Events from "@/components/ui/Events";
@@ -23,6 +24,7 @@ export default function Home() {
       <MonthlyEvents />
       <Events />
       <Branches />
+      <Declaration />
       <Quote />
       <Testimonial />
       <Training />
