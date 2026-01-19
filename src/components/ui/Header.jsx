@@ -36,9 +36,10 @@ const Header = () => {
             </Link>
             <div className='md:flex hidden items-center gap-[30px] justify-between'>
                 <div className='flex md:text-[14px] uppercase text-white font-[600] items-center gap-[60px] justify-between'>
-                    <Link href={"#about"}>About</Link>
-                    <Link href={"#events"}>Events</Link>
-                    {/* <Link href={"#contact"}>Location</Link> */}
+                    <Link href={"/#about"}>About</Link>
+                    <Link href={"/#events"}>Events</Link>
+                    <Link href={"/school-of-ministry"}>Ministry School</Link>
+                    {/* <Link href={"/#contact"}>Location</Link> */}
                 </div>
 
                 <Link href="#contact" className=''>
@@ -56,9 +57,10 @@ const Header = () => {
             </div>
             <div className='flex flex-col p-8 gap-8'>
                 <div className='text-[14px] regular uppercase text-black font-[600] flex flex-col gap-6'>
-                    <Link href={"#about"}>About</Link>
-                    <Link href={"#events"}>Events</Link>
-                    {/* <Link href={"#contact"}>Location</Link> */}
+                    <Link href={"/#about"}>About</Link>
+                    <Link href={"/#events"}>Events</Link>
+                    <Link href={"/school-of-ministry"}>Ministry School</Link>
+                    {/* <Link href={"/#contact"}>Location</Link> */}
                 </div>
 
                 <Link href="#contact" className=''>

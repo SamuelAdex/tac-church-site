@@ -52,13 +52,13 @@ const Footer = () => {
                 <div className=''>
                     <div className='md:text-[14px] text-[12px] semibold uppercase'>Download Our Digital Library App</div>
                     <div className='flex md:flex-row flex-col items-center gap-2 mt-2'>
-                        <div className='flex items-center md:w-auto w-full cursor-pointer text-white gap-2 bg-black rounded-[12px] p-4'>
+                        <Link target="_blank" href={"https://play.google.com/store/apps/details?id=com.samueladex.tcdl&hl=en"} className='flex items-center md:w-auto w-full cursor-pointer text-white gap-2 bg-black rounded-[12px] p-4'>
                             <IoLogoGooglePlaystore className='text-4xl' />
                             <div className='md:leading-[18px]'>
                                 <div className='md:text-[12px] text-[10px]'>GET IT ON</div>
                                 <div className='md:text-[20px] semibold'>Google Play</div>
                             </div>
-                        </div>
+                        </Link>
                         <div className='flex items-center md:w-auto w-full cursor-pointer text-white gap-2 bg-black rounded-[12px] p-4'>
                             <IoLogoApple  className='text-4xl' />
                             <div className='md:leading-[18px]'>

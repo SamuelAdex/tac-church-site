@@ -146,7 +146,8 @@ export let featureData = [
         desc: "Acquiring relavance knowledge in ministry and leadership.",
         img: 'https://res.cloudinary.com/samueladexcloudinary/image/upload/v1749562239/IMG_0723-5_eu93za.jpg',
         width: 438.21,
-        height: 438.21
+        height: 438.21,
+        link: "/school-of-ministry"
     },
     // {
     //     id: 2,
@@ -162,7 +163,8 @@ export let featureData = [
         desc: "Learn the fundamentals of faith and baptism to boost your authority in Christ.",
         img: 'https://res.cloudinary.com/samueladexcloudinary/image/upload/v1748796508/FB_IMG_1748599612842_ll8pfb.jpg',
         width: 438.21,
-        height: 438.21
+        height: 438.21,
+        link: "/baptismal-class"
     },
     {
         id: 4,
@@ -170,7 +172,8 @@ export let featureData = [
         desc: "Master the art of media production and technical support.",
         img: 'https://res.cloudinary.com/samueladexcloudinary/image/upload/f_auto/q_auto/v1749563749/media-camera_vxorno.jpg',
         width: 438.21,
-        height: 438.21
+        height: 438.21,
+        link: "/media-training"
     },
     {
         id: 5,
@@ -178,6 +181,7 @@ export let featureData = [
         desc: "Enhance your musical skills and learn to play instruments.",
         img: 'https://res.cloudinary.com/samueladexcloudinary/image/upload/v1748796508/FB_IMG_1748599685998_he2fl7.jpg',
         width: 438.21,
-        height: 438.21
+        height: 438.21,
+        link: "/musical-training"
     },
 ];

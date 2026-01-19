@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import Image from 'next/image';
 import { featureData } from '@/utils/data';
+import Link from 'next/link';
 
 const Training = () => {
     const swiper = useSwiper();
@@ -65,9 +66,10 @@ const Training = () => {
                         {featureData.map((feature, index) => (
                             <SwiperSlide key={index}>
                                 <div className='relative overflow-hidden w-[439px] h-[604px] bg-[rgba(255,255,255,0.09)] rounded-[30px]'>
-                                    <div className='p-8 space-y-2'>
+                                    <div className='p-8 space-y-4'>
                                         <div className='text-white md:leading-[38px] md:text-[36px] text-[18px] semibold'>{feature.title}</div>
                                         <p className='text-white md:text-[16px] text-[12px] font-[500]'>{feature.desc}</p>
+                                        <Link href={feature.link} className='text-white md:text-[16px] underline text-[12px] font-[500]'>Apply Now</Link>
                                     </div>
                                     <div className='absolute bottom-0 w-full'>
                                         <Image src={feature.img} alt='' width={feature.width} height={feature.height} className='w-full h-full object-cover' />
@@ -105,6 +107,7 @@ const Training = () => {
                                     <div className='p-8 space-y-2'>
                                         <div className='text-white md:leading-[38px] text-[23.49px] leading-[24px] semibold'>{feature.title}</div>
                                         <p className='text-white text-[10px] font-[500]'>{feature.desc}</p>
+                                        <Link href={feature.link} className='text-white md:text-[16px] underline text-[12px] font-[500]'>Apply Now</Link>
                                     </div>
                                     <div className='absolute bottom-0 w-full'>
                                         <Image src={feature.img} alt='' width={feature.width} height={feature.height} className='w-full h-full object-cover' />
