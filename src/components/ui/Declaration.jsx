@@ -8,10 +8,11 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { HiOutlineSpeakerphone } from 'react-icons/hi';
 import { IoMdQuote } from 'react-icons/io';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const declarations = [
     {
-        id: 1,
+        id: 2,
         text: `DAY 8: ENJOYING DIVINE SPEED IN 2026
 
 IN THE NAME OF JESUS CHRIST, I DECLARE THAT 2026 IS MY YEAR OF DIVINE SPEED. EVERY GOD-ORDAINED MATTER IN MY LIFE MOVES FORWARD WITHOUT DELAY OR RESISTANCE.
@@ -36,12 +37,40 @@ SCRIPTURE: “YOU CROWN THE YEAR WITH YOUR GOODNESS, AND YOUR PATHS DRIP WITH AB
 I DECREE THAT I MOVE AHEAD OF COMPETITION, AHEAD OF LIMITATIONS, AND AHEAD OF PREVIOUS VERSIONS OF MYSELF BY GOD’S SPEED.
 SCRIPTURE: “FOR NOT BY MIGHT NOR BY POWER, BUT BY MY SPIRIT, SAYS THE LORD OF HOSTS.” — ZECHARIAH 4:6`,
         reference: "Philippians 4:13"
-    }
+    },
+    {
+        id: 1,
+        text: `DAY 7: ARRESTING AND BREAKING OUT FROM THE SPIRIT OF DELAY
+
+IN THE NAME OF JESUS CHRIST, I DECLARE THAT EVERY SPIRIT OF DELAY WORKING AGAINST MY LIFE, DESTINY, AND PURPOSE IS ARRESTED AND BROKEN NOW. I STEP OUT OF WAITING INTO DIVINE TIMING.
+SCRIPTURE: “FOR THE VISION IS YET FOR AN APPOINTED TIME; BUT AT THE END IT WILL SPEAK, AND IT WILL NOT LIE. THOUGH IT TARRIES, WAIT FOR IT; BECAUSE IT WILL SURELY COME, IT WILL NOT TARRY.” — HABAKKUK 2:3
+
+I COMMAND EVERY POWER ASSIGNED TO POSTPONE MY RESULTS, MY TESTIMONIES, AND MY ANSWERS TO LOSE AUTHORITY OVER ME THIS YEAR.
+SCRIPTURE: “THE LORD WILL HASTEN IT IN ITS TIME.” — ISAIAH 60:22
+I DECLARE THAT I BREAK OUT OF EVERY CYCLE OF ALMOST-THERE, NEAR-SUCCESS, AND REPEATED SETBACKS. I MOVE FORWARD WITH SPEED.
+SCRIPTURE: “AND DAVID ENQUIRED OF THE LORD… AND THE LORD SAID, GO UP; FOR I WILL DOUBTLESS DELIVER.” — 2 SAMUEL 5:19
+I PROPHESY THAT WHAT HAS BEEN HELD BACK IS RELEASED NOW. MY ANSWERS WILL NO LONGER BE STUCK IN THE REALM OF WAITING.
+SCRIPTURE: “FROM THE FIRST DAY THAT YOU SET YOUR HEART TO UNDERSTAND… YOUR WORDS WERE HEARD.” — DANIEL 10:12
+I DECLARE THAT EVERY MOUNTAIN OF DELAY IS LEVELLED BEFORE ME. NOTHING STANDS BETWEEN ME AND MY PROMISED RESULTS.
+SCRIPTURE: “WHO ARE YOU, O GREAT MOUNTAIN? BEFORE ZERUBBABEL YOU SHALL BECOME A PLAIN.” — ZECHARIAH 4:7
+
+I COMMAND SUPERNATURAL SPEED TO REPLACE SLOWNESS IN MY LIFE, MY BUSINESS, AND MY DESTINY JOURNEY.
+SCRIPTURE: “AND ELIJAH GIRD UP HIS LOINS, AND RAN AHEAD OF AHAB.” — 1 KINGS 18:46
+I DECLARE THAT I WILL NO LONGER LABOR WITHOUT RESULTS. MY EFFORTS WILL PRODUCE TIMELY HARVESTS.
+SCRIPTURE: “YOU SHALL NOT LABOR IN VAIN, NOR BRING FORTH CHILDREN FOR TROUBLE.” — ISAIAH 65:23
+I PROPHESY THAT MY STEPS ARE ORDERED, AND I WILL NOT MISS GOD’S WINDOWS OF OPPORTUNITY THIS YEAR.
+SCRIPTURE: “THE STEPS OF A GOOD MAN ARE ORDERED BY THE LORD.” — PSALM 37:23
+I DECLARE THAT DELAY WILL NOT TURN INTO DENIAL IN MY LIFE. GOD’S PROMISES CONCERNING ME ARE COMING TO PASS.
+SCRIPTURE: “FOR ALL THE PROMISES OF GOD IN HIM ARE YES, AND IN HIM AMEN.” — 2 CORINTHIANS 1:20
+I DECREE THAT FROM THIS DAY FORWARD, I OPERATE IN DIVINE ACCELERATION, TIMELY HELP, AND SPEEDY TESTIMONIES.
+SCRIPTURE: “BEHOLD, I WILL DO A NEW THING; NOW IT SHALL SPRING FORTH.” — ISAIAH 43:19`,
+        reference: "Habakkuk 2:3"
+    },
 ];
 
 const Declaration = () => {
     return (
-        <section className="py-20 bg-[#0a0a0a] relative overflow-hidden">
+        <section id="declaration" className="py-20 bg-[#0a0a0a] relative overflow-hidden">
             {/* Background Decorative Elements */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-orange-200/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-orange-200/5 rounded-full blur-3xl -ml-32 -mb-32"></div>
@@ -60,24 +89,28 @@ const Declaration = () => {
                     </p>
                 </div>
 
-                <div className="relative group">
+                <div className="relative px-4 md:px-12">
                     <Swiper
                         spaceBetween={30}
-                        navigation={true}
+                        navigation={{
+                            nextEl: '.custom-button-next',
+                            prevEl: '.custom-button-prev',
+                        }}
                         pagination={{
                             clickable: true,
                             dynamicBullets: true,
+                            el: '.custom-pagination',
                         }}
                         modules={[Pagination, Navigation]}
-                        className="mySwiper !pb-16"
+                        className="mySwiper !pb-20"
                     >
                         {declarations.map((dec) => (
                             <SwiperSlide key={dec.id}>
-                                <div className="bg-gradient-to-br h-[400px] overflow-y-scroll from-neutral-900 to-black border border-white/5 p-8 md:p-16 rounded-3xl text-center shadow-2xl relative">
-                                    <IoMdQuote className="text-6xl text-orange-200/10 absolute top-8 left-8" />
+                                <div className="bg-gradient-to-br h-[500px] overflow-y-auto custom-scrollbar from-neutral-900 to-black border border-white/5 p-6 md:p-16 rounded-3xl text-center shadow-2xl relative">
+                                    <IoMdQuote className="text-4xl md:text-6xl text-orange-200/10 absolute top-4 left-4 md:top-8 md:left-8" />
                                     
-                                    <div className="relative z-10">
-                                        <p className="text-xl md:text-2xl text-white font-medium leading-relaxed mb-8 italic whitespace-pre-line">
+                                    <div className="relative z-10 pt-4 md:pt-0">
+                                        <p className="text-lg md:text-2xl text-white font-medium leading-relaxed mb-8 italic whitespace-pre-line text-left md:text-center">
                                             &quot;{dec.text}&quot;
                                         </p>
                                         <div className="h-1 w-20 bg-orange-200 mx-auto mb-6"></div>
@@ -86,14 +119,53 @@ const Declaration = () => {
                             </SwiperSlide>
                         ))}
                     </Swiper>
+
+                    {/* Navigation Buttons Container */}
+                    <div className="flex items-center justify-center gap-8 mt-4 md:mt-0">
+                        <button className="custom-button-prev md:absolute md:left-0 md:top-1/2 md:-translate-y-1/2 z-30 w-12 h-12 bg-orange-200/10 border border-orange-200/20 text-orange-200 rounded-full flex items-center justify-center hover:bg-orange-200 hover:text-black transition-all duration-300 shadow-xl backdrop-blur-sm active:scale-95">
+                            <FaChevronLeft className="text-lg" />
+                        </button>
+                        
+                        <div className="custom-pagination !static !w-auto flex gap-2"></div>
+
+                        <button className="custom-button-next md:absolute md:right-0 md:top-1/2 md:-translate-y-1/2 z-30 w-12 h-12 bg-orange-200/10 border border-orange-200/20 text-orange-200 rounded-full flex items-center justify-center hover:bg-orange-200 hover:text-black transition-all duration-300 shadow-xl backdrop-blur-sm active:scale-95">
+                            <FaChevronRight className="text-lg" />
+                        </button>
+                    </div>
                 </div>
 
-                <div className="text-center mt-8">
+                <div className="text-center mt-12">
                     <p className="text-gray-500 text-sm">
                         &quot;For with the heart man believeth unto righteousness; and with the mouth confession is made unto salvation.&quot; - Romans 10:10
                     </p>
                 </div>
             </div>
+
+            <style jsx global>{`
+                .custom-scrollbar::-webkit-scrollbar {
+                    width: 4px;
+                }
+                .custom-scrollbar::-webkit-scrollbar-track {
+                    background: rgba(255, 255, 255, 0.05);
+                    border-radius: 8px;
+                }
+                .custom-scrollbar::-webkit-scrollbar-thumb {
+                    background: rgba(254, 215, 170, 0.2);
+                    border-radius: 8px;
+                }
+                .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                    background: rgba(254, 215, 170, 0.4);
+                }
+                .swiper-pagination-bullet {
+                    background: #fed7aa !important;
+                    opacity: 0.3 !important;
+                }
+                .swiper-pagination-bullet-active {
+                    opacity: 1 !important;
+                    width: 20px !important;
+                    border-radius: 4px !important;
+                }
+            `}</style>
         </section>
     );
 }
